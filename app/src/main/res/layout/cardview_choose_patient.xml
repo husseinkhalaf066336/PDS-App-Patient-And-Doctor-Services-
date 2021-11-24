@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:elevation="@dimen/_18sdp"
+    android:padding="@dimen/_3sdp"
+    app:cardCornerRadius="@dimen/_18sdp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_activity_login_cardview"
+        android:padding="@dimen/_3sdp">
+
+        <ImageView
+            android:id="@+id/PatientImage"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/patient" />
+
+        <TextView
+            android:id="@+id/PatientNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientName"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/PatientName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/PatientName" />
+
+        <TextView
+            android:id="@+id/PatientName"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientName"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toStartOf="@+id/PatientImage"
+            app:layout_constraintStart_toEndOf="@+id/PatientNameText"
+            app:layout_constraintTop_toTopOf="@+id/PatientImage" />
+
+        <TextView
+            android:id="@+id/PatientPronText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientPron"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/PatientPron"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/PatientPron"  />
+
+        <TextView
+            android:id="@+id/PatientPron"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientPron"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/PatientImage"
+            app:layout_constraintEnd_toStartOf="@+id/PatientImage"
+            app:layout_constraintStart_toEndOf="@+id/PatientPronText"
+            app:layout_constraintTop_toBottomOf="@+id/PatientName" />
+
+        <Button
+            android:id="@+id/cardViewPatient_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/choosePatient_btn_PatientViewInfo"
+            app:cornerRadius="@dimen/_7sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PatientImage"  />
+
+        <TextView
+            android:id="@+id/textView_choosePatient_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientEmail"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_choosePatient_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_choosePatient_email" />
+
+        <TextView
+            android:id="@+id/text_choosePatient_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientEmail"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@+id/text_choosePatient_Address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_choosePatient_email"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewPatient_button"/>
+
+        <TextView
+            android:id="@+id/textView_choosePatient_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientAddress"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_choosePatient_Address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_choosePatient_Address"/>
+
+        <TextView
+            android:id="@+id/text_choosePatient_Address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/choosePatient_TextView_PatientAddress"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/text_choosePatient_email"
+            app:layout_constraintStart_toEndOf="@+id/textView_choosePatient_Address"
+            app:layout_constraintTop_toBottomOf="@+id/text_choosePatient_email" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/abel</item>
+        <item>@font/andika</item>
+        <item>@font/artifika</item>
+        <item>@font/baloo</item>
+        <item>@font/caveat_brush</item>
+        <item>@font/fjord_one</item>
+        <item>@font/galada</item>
+        <item>@font/julee</item>
+        <item>@font/quando</item>
+    </array>
+</resources>

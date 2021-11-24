@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#03a9f4</color>
+    <color name="colorAccent">#4fc3f7</color>
+
+    <color name="white">#ffff</color>
+    <color name="Orange">#ef6c00</color>
+    <color name="yellow">#ffd600</color>
+    <color name="green">#008000</color>
+
+
+
+<!--    HomeUsers-->
+    <color name="colorViewBackground">#d8def1</color>
+    <color name="colorViewText">#7a7c7b</color>
+    <color name="colorShapeStrokeImageUser">#3470a1</color>
+
+    <!--    HomeCardView-->
+
+    <color name="colorItemStart1">#82c6f1</color>
+    <color name="colorItemEnd1">#7c9cf3</color>
+
+    <color name="colorItemStart2">#f5b367</color>
+    <color name="colorItemEnd2">#ee9f5c</color>
+
+    <color name="colorItemStart3">#ed6794</color>
+    <color name="colorItemEnd3">#ea5671</color>
+
+
+    <color name="colorItemStart4">#cc79f2</color>
+    <color name="colorItemEnd4">#947ff4</color>
+
+    <color name="colorItemStart5">#6ae7ce</color>
+    <color name="colorItemEnd5">#68e0b8</color>
+
+    <color name="colorItemUserAppointment">#426de5</color>
+    <color name="colorItemUserAppointment1">#ff6666</color>
+    <color name="colorItemUserAppointment2">#33cc66</color>
+    <color name="colorItemUserAppointment3">#e5b628</color>
+
+    <color name="colorBack">#50ffffff</color>
+
+
+
+<!--cardViewAvailableAppointment-->
+    <color name="cardViewAvailableAppointmentStart">#03a9f4</color>
+    <color name="cardViewAvailableAppointmentEnd">#1cb9fd</color>
+
+
+</resources>

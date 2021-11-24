@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDS</string>
+
+    <!--    activityLogin-->
+    <string name="activityLogin_txt_tolbar">مرحبا بك في تطبيق خدمات المرضى </string>
+    <string name="activityLogin_EitText_email">البريد الإلكتروني</string>
+    <string name="activityLogin_EitText_password">كلمة المرور</string>
+    <string name="activityLogin_Button_login">دخول</string>
+    <string name="activityLogin_Button_registe">انشاء حساب</string>
+
+    <!--    RegisterActivity-->
+    <string name="activityRegister_TextView_container">المعلومات الاساسية</string>
+    <string name="activityRegister_EitText_userName">الاسم الكامل</string>
+    <string name="activityRegister_EitText_email">البريد الإلكتورني</string>
+    <string name="activityRegister_EitText_password">كلمة المرور</string>
+    <string name="activityRegister_EitText_ConfirmPassword"> تأكيد كلمة المرور</string>
+    <string name="activityRegister_btn_Choose_Age">انقر لاختيار تاريخ مواليدك</string>
+    <string name="activityRegister_EitText_Age">المواليد</string>
+    <string name="activityRegister_EitText_Address">العنوان</string>
+    <string name="activityRegister_Button_save">حفظ</string>
+
+    <!--    dashboard_user-->
+    <string name="dashboard_user_image_top_TextView">تطبيق PDS</string>
+
+    <string name="dashboard_user_cardView_TextView_appointment1">المـــواعيـــــــد</string>
+    <string name="dashboard_user_cardView_TextView_appointment2"> إدارة مواعيدك</string>
+
+    <string name="dashboard_user_cardView_TextView_show_appointment">عرض المواعيد</string>
+    <string name="dashboard_user_cardView_TextView_show_appointment2">المواعيد المتاحة</string>
+
+    <string name="dashboard_user_cardView_TextView_MedicalReport1"> التقارير الطبية</string>
+    <string name="dashboard_user_cardView_TextView_MedicalReport2">عرض تقاريري</string>
+
+    <string name="dashboard_Doctor_cardView_TextView_MedicalReport2">اضافة تقرير لمريض</string>
+
+    <string name="dashboard_user_cardView_TextView_Profile1">ملفي الطبي</string>
+    <string name="dashboard_user_cardView_TextView_Profile2">عرض الملف</string>
+
+    <!--    chooseDoctor-->
+    <string name="chooseDoctor_TextView_doctorName">اسم الطبيب</string>
+    <string name="chooseDoctor_TextView_doctorSpecialization">الاختصاص</string>
+    <string name="textView_chooseDoctor_Functional_section">القسم الوظيفي</string>
+    <string name="textView_chooseDoctor_doctorEmail">البريد الإلكتروني</string>
+    <string name="chooseDoctor_btn_doctorViewInfo">عرض معلومات اضافية عن الطبيب</string>
+    <string name="chooseDoctor_btn_doctorViewInfo2">اخفاء المعلومات الإضافية عن الطبيب </string>
+
+
+    <!--    choosePatient-->
+    <string name="choosePatient_TextView_PatientName">اسم المريض:</string>
+    <string name="choosePatient_TextView_PatientPron">المواليد:</string>
+    <string name="choosePatient_TextView_PatientEmail">البريد الإلكتروني:</string>
+    <string name="choosePatient_TextView_PatientAddress">العنوان:</string>
+    <string name="choosePatient_btn_PatientViewInfo">عرض مزيد من معلومات عن المريض</string>
+    <string name="choosePatient_btn_PatientViewInfo2">إخفاء المعلومات الإضافية عن المريض</string>
+
+
+    <!--    NewDoctorActivity-->
+    <string name="activityNewDoctor_TextView_container">المعلومات الأساسية</string>
+    <string name="activityNewDoctor_TextView_container1">معلومات الاختصاص</string>
+    <string name="activityNewDoctor_EitText_Specialization">التخصص</string>
+    <string name="activityRegister_EitText_Functional_section">القسم الوظيفي</string>
+    <string name="activityNewDoctor_EitText_About_the_doctor">نبذة عن الطبيب</string>
+
+    <!--    BookAppointment-->
+    <string name="BookAppointment_TextView_top">قم باختيار تاريخ ووقت الموعد من الموااعيد الطبيب المتاحة </string>
+    <string name="BookAppointment_EitText_reasonAppointment">سبب الموعد</string>
+    <string name="BookAppointment_EitText_DateAppointment">تاربخ الموعد</string>
+    <string name="BookAppointment_EitText_TimeAppointment">وقت الموعد</string>
+    <string name="BookAppointment_EitText_descriptionAppointment">وصف موجز عن الموعد</string>
+    <string name="BookAppointment_Button_choose_date_time">انقر لاختيار تاريخ الموعد </string>
+
+    <!--    ShowAppointmentUser-->
+    <string name="ShowAppointmentUser_textView_appointment_reason">سبب الموعد:</string>
+    <string name="ShowAppointmentUse_textView_appointment_date">تاريخ الموعد:</string>
+    <string name="textView_appointment_Time">وقت الموعد:</string>
+    <string name="ShowAppointmentUser_textView_appointment_description">وصف موجز:</string>
+    <string name="ShowAppointmentUser_textView_ToolbarAppointment">يمكنك الإطلاع على المواعيد التي قمت بحجزها</string>
+    <string name="ShowAppointmentUser_btn_doctorViewInfo">عرض معلومات اضافية</string>
+    <string name="ShowAppointmentUser_btn_doctorViewInfo2">اخفاء معلومات اضافية عن الموعد</string>
+
+    <!--    dashboardDoctor-->
+    <string name="dashboardDoctor_TextView_appointment1">المواعيد المتاحة</string>
+    <string name="dashboardDoctor_TextView_appointment2"> إدارة مواعيدك</string>
+
+<!--    AvailableAppointmentsActivity-->
+    <string name="AvailableAppointmentsActivity_TextView_topView">اهلن بك في قائمة اختيار المواعيد المتاحة</string>
+    <string name="AvailableAppointmentsActivity_TextView_container">المواعيد المتاحة</string>
+    <string name="AvailableAppointmentsActivity_Button_AddDate">اضافة تاريخ الموعد</string>
+    <string name="AvailableAppointmentsActivity_Button_AddTime">اضافة تاريخ الموعد</string>
+
+    <!--  ChooosAvailableAppointmentsActivity-->
+    <string name="ChooseAvailableAppointmentsActivity_TextView_topView">يمكنك اختيار موعد من قائمة مواعيد الطبيب المتاحة </string>
+    <string name="ChooseAvailableAppointmentsActivity_TextView_date">التاريخ: </string>
+    <string name="ChooseAvailableAppointmentsActivity_TextView_time">التوقيت:</string>
+
+    <!--  ShowDoctorAvailableAppointmentsActivity-->
+    <string name="ShowDoctorAvailableAppointmentsActivity_TextView"> مواعيد الطبيب المتاحة </string>
+
+    <!--    MedicalReport-->
+    <string name="MedicalReport_EditText_ReportTitle">عنوان التقرير الطبي </string>
+    <string name="MedicalReport_EditText_ReportDetails"> التقرير الطبي بشكل تفصيلي</string>
+    <string name="MedicalReport_EditText_DoctorsInstructions"> التصائح التي يجب على المريض اتباعها</string>
+    <string name="MedicalReport_EditText_SuggestedMedication">الأدوية المقترحة </string>
+
+    <string name="AddReportButton">اضافة تقرير لمريض</string>
+    <string name="ShowReportButton">عرض تقاريري</string>
+
+    <!--    ShowMedicalReport-->
+    <string name="ShowMedicalReport_TextView_ReportTitle">عنوان التقرير الطبي: </string>
+    <string name="ShowMedicalReport_TextView__ReportDetails">تفصيل التقرير:</string>
+    <string name="ShowMedicalReport_TextView_DoctorsInstructions">نصائح الطبيب:</string>
+    <string name="ShowMedicalReport_TextView_SuggestedMedication">الأدوية المقترحة: </string>
+
+    <!--    Patient Appointment Fragment-->
+    <string name="PatientAppointmentFragment_TextView_Welcome">مرحبا بك في</string>
+    <string name="PatientAppointmentFragment_TextView_Appointment">المـــــواعـــيــــــد</string>
+    <string name="PatientAppointmentFragment_TextView_Appointment1">أضف مواعيدك</string>
+    <string name="PatientAppointmentFragment_TextView_NEWAppointment1">اضافة موعد جديد</string>
+    <string name="PatientAppointmentFragment_TextView_ShowAppointment1">عـرض مواعــيدي</string>
+
+    <!--    Patient Appointment Fragment-->
+    <string name="DoctorAppointmentFragment_TextView_Welcome">مرحبا بك في</string>
+    <string name="DoctorAppointmentFragment_TextView_Appointment">المـــــواعـــيــــــد</string>
+    <string name="DoctorAppointmentFragment_TextView_Appointment1">موعيدك</string>
+    <string name="DoctorAppointmentFragment_TextView_NEWAppointment1">اضافة موعد جديد</string>
+    <string name="DoctorAppointmentFragment_TextView_ShowAppointment1">عـرض مواعــيدي</string>
+
+
+    <!--  MideclalReportFragment-->
+    <string name="MedicalReportReportFragment_TextView_welcome">مرحبا بك في نافذة</string>
+    <string name="MedicalReportFragment_TextView1">التقارير الطبية</string>
+    <string name="UserMedicalReportFragment_TextVie2">يمكنك الإطلاع على تقاريرك  </string>
+    <string name="DoctorMedicalReportFragment_TextVie2"> إضافة تقارير طبية للمرضى </string>
+
+
+    <!--  UserProfile-->
+    <string name="UserProfile_TextView_welcome">اهلن بك في ملفك الشخصي</string>
+    <string name="UserProfile_Btn_edit_profile"> تعديل ملفك الشخصي</string>
+    <string name="UserProfile_Btn_ViewAppointments">عرض مواعيدي</string>
+    <string name="UserProfile_Btn_ViewMedicalReport">عرض تقاريري الطبية</string>
+
+    <!--Languge-->
+    <string name="LangugeActivity_txtview">بأكمانك تغير اللغة  </string>
+    <string name="LangugeActivity_btn_ar">اللغة العربية</string>
+    <string name="LangugeActivity_btn_en">اللغة الإنكليزية</string>
+
+    <!--Home_menu-->
+    <string name="Home_menu_Home">الرئيسية</string>
+    <string name="Home_menu_Appointments">المواعيد </string>
+    <string name="Home_menu_Diagnoses">التشخيص</string>
+    <string name="Home_menu_MedicalReport">التقارير</string>
+    <string name="Home_menu_language">اللغة</string>
+    <string name="Home_menu_management">ادراة المستخدمين</string>
+    <string name="Home_menu_MyProfile">الملف الشخصي</string>
+    <string name="Home_menu_Logout">تسجيل الخروج</string>
+    <!--searche_menu-->
+    <string name="search_menu">بحث </string>
+
+
+
+
+</resources>

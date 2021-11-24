@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Activities.BookAppointmentActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/wave2_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+
+        <ImageView
+            android:id="@+id/bookAppointment_icon_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clock1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appBarLayout" />
+
+
+        <ImageView
+            android:id="@+id/imageViewDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/doctor3d1"
+            app:layout_constraintBottom_toTopOf="@+id/container11"
+            app:layout_constraintEnd_toEndOf="@+id/container11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/container11"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewDashboard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="0.100000024"
+            app:srcCompat="@drawable/ic_iconclock" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="78dp"
+            android:text="@string/BookAppointment_TextView_top"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/bookAppointment_icon_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bookAppointment_icon_user"
+            app:layout_constraintTop_toTopOf="@+id/bookAppointment_icon_user" />
+
+        <LinearLayout
+            android:id="@+id/container11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/shap_activity_login_cardview"
+            android:elevation="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/shap_heiding_text"
+                android:gravity="start"
+                android:text="المعلومات الاساسية"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_24ssp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BookAppointment_EitText_reasonAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_icon_address_book"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/BookAppointment_EitText_reasonAppointment"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/_20sdp"
+                    android:scrollbars="vertical" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/BookAppointment_btn_ChooseAvailableAppointment"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableEnd="@drawable/ic_add_circle"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="@string/BookAppointment_Button_choose_date_time"
+                android:textSize="@dimen/_18ssp"
+                app:cornerRadius="@dimen/_15sdp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BookAppointment_EitText_DateAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_icon_calendar"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:hint="@string/BookAppointment_EitText_DateAppointment"
+                    android:padding="@dimen/_20sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BookAppointment_EitText_TimeAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_icontimenav"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:hint="@string/BookAppointment_EitText_TimeAppointment"
+                    android:padding="@dimen/_20sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BookAppointment_EitText_descriptionAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_iconsave_disk"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/BookAppointment_EitText_descriptionAppointment"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/_20sdp"
+                    android:scrollbars="vertical" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/button_appointment_save"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/activityRegister_Button_save"
+                android:textSize="@dimen/_20ssp"
+                app:cornerRadius="@dimen/_10sdp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

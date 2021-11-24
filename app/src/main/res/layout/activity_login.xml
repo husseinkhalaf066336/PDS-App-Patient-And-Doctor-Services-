@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Activities.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@drawable/wave2_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <ImageView
+        android:id="@+id/activityLogin_icon_user"
+        android:layout_width="56dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.39"
+        app:srcCompat="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/activityLogin_txt_tolbar"
+        android:layout_width="175dp"
+        android:layout_height="56dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/activityLogin_txt_tolbar"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/activityLogin_icon_user"
+        app:layout_constraintStart_toEndOf="@+id/activityLogin_icon_user"
+        app:layout_constraintTop_toTopOf="@+id/activityLogin_icon_user" />
+
+        <ImageView
+            android:id="@+id/UserProfile_imageView_user"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/LoginContainer1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:srcCompat="@drawable/imglogin" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="242dp"
+        android:layout_height="203dp"
+        app:layout_constraintEnd_toStartOf="@+id/activityLogin_doctor1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityLogin_icon_user"
+        app:srcCompat="@drawable/ic_undrawdoctors" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="PDS"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_40ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/activityLogin_doctor1"
+        app:layout_constraintEnd_toEndOf="@+id/activityLogin_doctor1"
+        app:layout_constraintStart_toStartOf="@+id/activityLogin_doctor1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/activityLogin_doctor1"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/_230sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.167"
+        app:srcCompat="@drawable/doctor4" />
+
+
+        <LinearLayout
+            android:id="@+id/LoginContainer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserProfile_imageView_user"
+            android:layout_gravity="center"
+            android:background="@drawable/shap_activity_login_cardview"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activityLogin_EitText_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_icon_email"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/activityLogin_EitText_email"
+                    android:padding="@dimen/_20sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:layout_margin="@dimen/_3sdp">
+<!--                -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activityLogin_EitText_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_icon_pass"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/activityLogin_EitText_password"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/_20sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/activityLogin_Button_login"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/activityLogin_Button_login"
+                android:onClick="login"
+                android:textSize="@dimen/_16ssp"
+                app:cornerRadius="@dimen/_10sdp" />
+
+            <Button
+                android:id="@+id/activityLogin_Button_registe"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/green"
+                android:text="@string/activityLogin_Button_registe"
+                android:textSize="@dimen/_16ssp"
+                app:cornerRadius="@dimen/_10sdp" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

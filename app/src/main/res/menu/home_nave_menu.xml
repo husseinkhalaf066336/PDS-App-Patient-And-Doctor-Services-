@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="@string/Home_menu_Home"
+            android:icon="@drawable/ic_home2"
+            android:id="@+id/Home"
+            />
+        <item
+            android:title="@string/Home_menu_Appointments"
+            android:icon="@drawable/ic_iconclock"
+            android:id="@+id/Appointments"
+            />
+        <item
+            android:title="@string/Home_menu_Diagnoses"
+            android:icon="@drawable/ic_videocamera"
+            android:id="@+id/Diagnoses"
+            />
+        <item
+            android:title="@string/Home_menu_MedicalReport"
+            android:icon="@drawable/ic_report2red"
+            android:id="@+id/MedicalReport"
+            />
+        <item
+            android:title="@string/Home_menu_language"
+            android:icon="@drawable/ic_language"
+            android:id="@+id/App_language"
+            />
+        <item
+            android:title="@string/Home_menu_management"
+            android:icon="@drawable/ic_iuser_bleu"
+            android:id="@+id/_management"
+            />
+        <item
+            android:title="@string/Home_menu_MyProfile"
+            android:icon="@drawable/ic_ico_avatar"
+            android:id="@+id/MyProfile"
+            />
+        <item
+            android:title="@string/Home_menu_Logout"
+            android:icon="@drawable/ic_arro"
+            android:id="@+id/Logout"
+            />
+    </group>
+</menu>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Activities.DoctorProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/wave2_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+
+        <ImageView
+            android:id="@+id/activityRegister_icon_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_assignment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="230dp"
+            android:layout_height="106dp"
+            android:gravity="center"
+            android:text="@string/UserProfile_TextView_welcome"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/activityRegister_icon_user"
+            app:layout_constraintEnd_toStartOf="@+id/activityRegister_icon_user"
+            app:layout_constraintTop_toTopOf="@+id/activityRegister_icon_user" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/UserProfilecontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/shap_cardview_dashpord1"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/DoctorProfile_imageView_user"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@drawable/shap_register_imgv_user"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/doctor8"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/DoctorProfile_txt_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/andika"
+                android:gravity="center"
+                android:text="user name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintEnd_toEndOf="@+id/DoctorProfile_imageView_user"
+                app:layout_constraintStart_toStartOf="@+id/DoctorProfile_imageView_user"
+                app:layout_constraintTop_toBottomOf="@+id/DoctorProfile_imageView_user" />
+
+            <TextView
+                android:id="@+id/UserProfile_txt_Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="email"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/andika"
+                app:layout_constraintEnd_toEndOf="@+id/DoctorProfile_txt_userName"
+                app:layout_constraintStart_toStartOf="@+id/DoctorProfile_txt_userName"
+                app:layout_constraintTop_toBottomOf="@+id/DoctorProfile_txt_userName" />
+
+            <Button
+                android:id="@+id/DoctorProfile_btn_EditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20ssp"
+                app:cornerRadius="@dimen/_7sdp"
+                android:backgroundTint="@color/green"
+                android:text="@string/UserProfile_Btn_edit_profile"
+                app:layout_constraintEnd_toEndOf="@+id/UserProfile_txt_Email"
+                app:layout_constraintStart_toStartOf="@+id/UserProfile_txt_Email"
+                app:layout_constraintTop_toBottomOf="@+id/UserProfile_txt_Email" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/container11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/shap_activity_login_cardview"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_1sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserProfilecontainer">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/shap_heiding_text"
+                android:gravity="center"
+                android:text="@string/AvailableAppointmentsActivity_TextView_container"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_24ssp" />
+
+            <Button
+                android:id="@+id/DoctorProfile_btn_ShowAvailableAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:textSize="@dimen/_24ssp"
+                app:cornerRadius="@dimen/_10sdp"
+                android:text="@string/UserProfile_Btn_ViewAppointments" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/DoctorProfile_rv_ShowAvailableAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Appointments_container11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/shap_activity_login_cardview"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_1sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container11">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/shap_heiding_text"
+                android:gravity="center"
+                android:text="@string/DoctorAppointmentFragment_TextView_Appointment"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_24ssp" />
+
+            <Button
+                android:id="@+id/DoctorProfile_btn_ShowAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:textSize="@dimen/_24ssp"
+                app:cornerRadius="@dimen/_10sdp"
+                android:text="@string/UserProfile_Btn_ViewAppointments" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/DoctorProfile_rv_ShowAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

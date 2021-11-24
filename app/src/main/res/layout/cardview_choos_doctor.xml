@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_10sdp"
+    android:padding="@dimen/_3sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardUseCompatPadding="true"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_activity_login_cardview"
+        android:padding="@dimen/_3sdp">
+
+        <ImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/doctor8" />
+
+        <TextView
+            android:id="@+id/doctorNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chooseDoctor_TextView_doctorName"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/doctorName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/doctorName" />
+
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chooseDoctor_TextView_doctorName"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toStartOf="@+id/doctorImage"
+            app:layout_constraintStart_toEndOf="@+id/doctorNameText"
+            app:layout_constraintTop_toTopOf="@+id/doctorImage" />
+
+        <TextView
+            android:id="@+id/doctorSpecializationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chooseDoctor_TextView_doctorSpecialization"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/doctorSpecialization"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/doctorSpecialization" />
+
+        <TextView
+            android:id="@+id/doctorSpecialization"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chooseDoctor_TextView_doctorSpecialization"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/doctorImage"
+            app:layout_constraintEnd_toStartOf="@+id/doctorImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/doctorSpecializationText"
+            app:layout_constraintTop_toBottomOf="@+id/doctorName" />
+
+        <Button
+            android:id="@+id/cardViewDoctor_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:text="@string/chooseDoctor_btn_doctorViewInfo"
+            app:cornerRadius="@dimen/_7sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctorImage" />
+
+        <TextView
+            android:id="@+id/textView_chooseDoctor_Functional_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/textView_chooseDoctor_Functional_section"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/chooseDoctor_Functional_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/chooseDoctor_Functional_section" />
+
+        <TextView
+            android:id="@+id/chooseDoctor_Functional_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/textView_chooseDoctor_Functional_section"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@+id/chooseDoctor_doctorEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_chooseDoctor_Functional_section"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewDoctor_button" />
+
+        <TextView
+            android:id="@+id/textView_chooseDoctor_doctorEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/textView_chooseDoctor_doctorEmail"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/chooseDoctor_doctorEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/chooseDoctor_doctorEmail" />
+
+        <TextView
+            android:id="@+id/chooseDoctor_doctorEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/textView_chooseDoctor_doctorEmail"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/chooseDoctor_Functional_section"
+            app:layout_constraintStart_toEndOf="@+id/textView_chooseDoctor_doctorEmail"
+            app:layout_constraintTop_toBottomOf="@+id/chooseDoctor_Functional_section" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

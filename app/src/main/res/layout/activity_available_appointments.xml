@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Activities.AvailableAppointmentsActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/wave2_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+
+        <ImageView
+            android:id="@+id/bookAppointment_icon_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clock1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageViewDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/img8"
+            app:layout_constraintBottom_toTopOf="@+id/container11"
+            app:layout_constraintEnd_toEndOf="@+id/container11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/container11"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="250dp"
+            android:layout_height="66dp"
+            android:inputType="textMultiLine"
+            android:text="@string/AvailableAppointmentsActivity_TextView_topView"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/bookAppointment_icon_clock"
+            app:layout_constraintEnd_toStartOf="@+id/bookAppointment_icon_clock"
+            app:layout_constraintTop_toTopOf="@+id/bookAppointment_icon_clock" />
+
+        <LinearLayout
+            android:id="@+id/container11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/shap_activity_login_cardview"
+            android:elevation="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/shap_heiding_text"
+                android:gravity="center"
+                android:text="@string/AvailableAppointmentsActivity_TextView_container"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_24ssp" />
+                <Button
+                    android:id="@+id/AvailableAppointmentsActivity_Button_AddDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_add_circle"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/AvailableAppointmentsActivity_Button_AddDate"
+                    android:textSize="@dimen/_20ssp"
+                    app:cornerRadius="@dimen/_10sdp"
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/AvailableAppointment_EitText_DateAppointment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:padding="@dimen/_20sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/AvailableAppointmentsActivity_Button_AddTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_add_circle"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/AvailableAppointmentsActivity_Button_AddTime"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"                    android:textSize="@dimen/_20ssp"
+                    app:cornerRadius="@dimen/_10sdp"
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/AvailableAppointment_EitText_TimeAppointment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:padding="@dimen/_20sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/AvailableAppointmentsActivity_Button_save"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/activityRegister_Button_save"
+                android:textSize="@dimen/_20ssp"
+                app:cornerRadius="@dimen/_10sdp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

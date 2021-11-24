@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.Fragments.DashboardDoctorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/collapsingToolbarLayout2"
+            android:layout_width="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:layout_height="@dimen/_180sdp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?actionBarSize"
+                android:paddingLeft="25dp"
+                android:paddingTop="30dp"
+                android:paddingRight="25dp"
+                app:layout_constraintBottom_toTopOf="@+id/container111"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="194dp"
+                    android:layout_height="42dp"
+                    android:text="@string/DoctorAppointmentFragment_TextView_Welcome"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_24ssp"
+                    app:layout_constraintHorizontal_bias="0.634"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.04"
+                    android:text="@string/dashboard_user_image_top_TextView"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_24ssp"
+                    app:layout_constraintRight_toLeftOf="@+id/imageView6"
+                    app:layout_constraintStart_toStartOf="@+id/t1"
+                    app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:src="@drawable/doctor8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container111"
+                android:layout_width="385dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_undraw_mobile"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="234dp"
+                    android:layout_height="138dp"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:text="@string/DoctorAppointmentFragment_TextView_Appointment1"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView13"
+                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="10dp"
+                    android:text="2021/07/09"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.634"
+                    app:layout_constraintRight_toLeftOf="@+id/imageView9"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_500sdp"
+            android:background="@drawable/shap_lener_dashpoard"
+            android:paddingBottom="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/collapsingToolbarLayout2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewDashboardDoctor1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/colorItemStart1"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@+id/CardViewDashboardDoctor2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shap_cardview_dashpord1">
+
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/shap_cardview_angle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_appointment"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/ic_iconclock"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+                    <ImageView
+                        android:id="@+id/img_GOTO1"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iconarrow11" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_icon_address_book"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/PatientAppointmentFragment_TextView_ShowAppointment1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textV"
+                        android:layout_width="101dp"
+                        android:layout_height="83dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/dashboardDoctor_TextView_appointment2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/img_GOTO1"
+                        app:layout_constraintStart_toEndOf="@+id/image_appointment"
+                        app:layout_constraintTop_toTopOf="@+id/image_appointment"  />
+                    <ImageView
+                        android:id="@+id/image_appointment"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/ic_iconclock"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/view3"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewDashboardDoctor2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/colorItemStart1"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@+id/CardViewDashboardDoctor3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CardViewDashboardDoctor1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shap_cardview_dahapord2">
+
+                    <View
+                        android:id="@id/view33"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/shap_cardview_angle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_appointment2"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:src="@drawable/ic_report2red"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/view33"
+                        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+
+                    <ImageView
+                        android:id="@+id/img_GOTO2"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iconarrow11" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="@dimen/_170sdp"
+                        android:layout_height="37dp"
+                        android:drawableEnd="@drawable/ic_icontimenav"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/dashboard_user_cardView_TextView_show_appointment2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textVV"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/dashboard_user_cardView_TextView_appointment1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/img_GOTO2"
+                        app:layout_constraintStart_toEndOf="@+id/img_appointment2"
+                        app:layout_constraintTop_toTopOf="@+id/img_appointment2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewDashboardDoctor3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/colorItemStart1"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@+id/CardViewDashboardDoctor4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CardViewDashboardDoctor2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shap_cardview_dahpord3">
+                    <View
+                        android:id="@+id/view333"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/shap_cardview_angle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/img_appointment3"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:src="@drawable/ic_report1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/view333"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3333"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/img_GOTO3"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iconarrow11" />
+
+                    <TextView
+                        android:id="@+id/textView3333"
+                        android:layout_width="@dimen/_170sdp"
+                        android:layout_height="37dp"
+                        android:drawableEnd="@drawable/ic_report2red"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/dashboard_user_cardView_TextView_MedicalReport1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_24ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textVVV"
+                        android:layout_width="104dp"
+                        android:layout_height="78dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/dashboard_Doctor_cardView_TextView_MedicalReport2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/img_GOTO3"
+                        app:layout_constraintStart_toEndOf="@+id/img_appointment3"
+                        app:layout_constraintTop_toTopOf="@+id/img_appointment3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewDashboardDoctor4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/colorItemStart1"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/CardViewDashboardDoctor3"
+                app:layout_constraintTop_toBottomOf="@+id/CardViewDashboardDoctor3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shap_cardview_dahpord4">
+
+
+                    <View
+                        android:id="@+id/view3333"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/shap_cardview_angle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_appointment4"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:src="@drawable/ic_ico_avatar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/view3333"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/img_GOTO4"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iconarrow11" />
+
+                    <TextView
+                        android:id="@+id/textView33333"
+                        android:layout_width="@dimen/_170sdp"
+                        android:layout_height="37dp"
+                        android:drawableEnd="@drawable/ic_icon_user1"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/dashboard_user_cardView_TextView_Profile1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_24ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textVVVV"
+                        android:layout_width="101dp"
+                        android:layout_height="83dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="@string/dashboard_user_cardView_TextView_Profile2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/img_GOTO4"
+                        app:layout_constraintStart_toEndOf="@+id/img_appointment4"
+                        app:layout_constraintTop_toTopOf="@+id/img_appointment4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

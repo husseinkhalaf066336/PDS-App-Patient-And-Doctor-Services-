@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "155545056155",
+    "project_id": "pdsapp-d05cd",
+    "storage_bucket": "pdsapp-d05cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155545056155:android:0d47fec99e89b6b09de73e",
+        "android_client_info": {
+          "package_name": "com.eng_hussein_khalaf066336.pds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155545056155-tsds9osd4rmemfg49ogp79lb2t317e5o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eng_hussein_khalaf066336.pds",
+            "certificate_hash": "d64db172a236600f12182f50c31a85da8d2d0934"
+          }
+        },
+        {
+          "client_id": "155545056155-3c59dqsm1qnt9jf05jbirn8sp2va2l6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs_1OBKn7IallgWd36VqfqBOyfccj9Muw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155545056155-3c59dqsm1qnt9jf05jbirn8sp2va2l6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
