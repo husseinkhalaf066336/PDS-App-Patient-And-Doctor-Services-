@@ -27,84 +27,101 @@ public class ChooseDoctorActivity extends AppCompatActivity implements OnRecycle
     private RecyclerView recyclerView;
     private Toolbar toolbar;
     private ChooseDoctorAdapter adapter;
-    private ArrayList<Doctors> doctors;
+    private ArrayList<Doctors> doctorsList;
     private DoctorsViewModel doctorsViewModel;
-    public static String NAME_ID_choose_doctor_CODE= "name_id_choose_doctor_code";
+    public static String NAME_ID_choose_doctor_CODE = "name_id_choose_doctor_code";
     private DialogWaitFragment dialogWaitFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_doctor);
         doInitialization();
     }
-    private void doInitialization()
-    {
-        doctorsViewModel=new ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory
-                .getInstance(this.getApplication())).get(DoctorsViewModel.class);
-        dialogWaitFragment= DialogWaitFragment.newInstance("waiting","please wait when loading the list doctors");
-        dialogWaitFragment.show(getSupportFragmentManager(),null);
-        recyclerView = findViewById(R.id.chooseDoctor_rv);
-        toolbar = findViewById(R.id.chooseDoctor_toolbar);
-        setSupportActionBar(toolbar);
-        recyclerView.setHasFixedSize(true);
 
+    private void doInitialization() {
+        doctorsViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
+                .getInstance(this.getApplication())).get(DoctorsViewModel.class);
+        dialogWaitFragment = DialogWaitFragment.newInstance("waiting", "please wait when loading the list doctors");
+        dialogWaitFragment.show(getSupportFragmentManager(), null);
+        recyclerView = findViewById(R.id.chooseDoctor_rv);
+        recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager lm = new LinearLayoutManager(getBaseContext());
         recyclerView.setLayoutManager(lm);
-        doctors = new ArrayList<>();
-        adapter = new ChooseDoctorAdapter(doctors,this);
+        if (doctorsList == null) {
+            doctorsList = new ArrayList<>();
+        }
+        adapter = new ChooseDoctorAdapter(doctorsList,this);
         recyclerView.setAdapter(adapter);
+        toolbar = findViewById(R.id.chooseDoctor_toolbar);
+        setSupportActionBar(toolbar);
         getAllDoctors();
 
     }
-    public void getAllDoctors()
-    {
-        doctors.clear();
+
+    public void getAllDoctors() {
+        doctorsList.clear();
         doctorsViewModel.getDoctor("");//all doctors
         doctorsViewModel.getDoctorMutableLiveData().observe(this, new Observer<DataSnapshot>() {
             @Override
             public void onChanged(DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     // TODO: handle the post
-                    Doctors doctor=  postSnapshot.getValue(Doctors.class);
-                    doctors.add(doctor);
+                    Doctors doctor = postSnapshot.getValue(Doctors.class);
+                    doctorsList.add(doctor);
                 }
                 adapter.notifyDataSetChanged();
                 dialogWaitFragment.dismiss();
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search_menu,menu);
-
+        getMenuInflater().inflate(R.menu.search_menu, menu);
         SearchView searchView = (SearchView) menu.findItem(R.id.menu_Search).getActionView();
-
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-
+                filter(s);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String s) {
+                filter(s);
                 return false;
             }
         });
         searchView.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
+                getAllDoctors();
                 return false;
             }
         });
-        return  true;
+        return true;
+    }
+
+    private void filter(String text) {
+        ArrayList<Doctors> doctorsListFilter = new ArrayList<>();
+        for (Doctors doctor : doctorsList) {
+            if (doctor.getDoctorFullName().toLowerCase().contains(text.toLowerCase()) ||
+                    doctor.getDoctorEmail().toLowerCase().contains(text.toLowerCase())||
+                    doctor.getDoctorSpecialization().toLowerCase().contains(text.toLowerCase())||
+                    doctor.getDoctorFunctionalSection().toLowerCase().contains(text.toLowerCase())||
+                    doctor.getDoctorAddress().toLowerCase().contains(text.toLowerCase())) {
+                doctorsListFilter.add(doctor);
+            }
+            adapter.filterList(doctorsListFilter);
+        }
     }
 
     @Override
     public void onItemClick(String id) {
         Intent intent = new Intent(getBaseContext(), BookAppointmentActivity.class);
-        intent.putExtra(NAME_ID_choose_doctor_CODE,id);
+        intent.putExtra(NAME_ID_choose_doctor_CODE, id);
         startActivity(intent);
         finish();
     }

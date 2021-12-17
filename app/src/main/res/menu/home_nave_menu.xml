@@ -13,11 +13,6 @@
             android:id="@+id/Appointments"
             />
         <item
-            android:title="@string/Home_menu_Diagnoses"
-            android:icon="@drawable/ic_videocamera"
-            android:id="@+id/Diagnoses"
-            />
-        <item
             android:title="@string/Home_menu_MedicalReport"
             android:icon="@drawable/ic_report2red"
             android:id="@+id/MedicalReport"

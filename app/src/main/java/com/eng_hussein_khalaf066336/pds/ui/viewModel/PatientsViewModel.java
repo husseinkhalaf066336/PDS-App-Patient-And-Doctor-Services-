@@ -8,8 +8,8 @@ import com.eng_hussein_khalaf066336.pds.model.Users;
 import com.eng_hussein_khalaf066336.pds.repository.PatientsRepository;
 import com.google.firebase.database.DataSnapshot;
 
-public class PatientsViewModel extends ViewModel implements PatientsRepository.onFirebaseDatabasePatientsTaskComplete, PatientsRepository.onUserAdded {
-    private PatientsRepository patientsRepository =new PatientsRepository(this,this);
+public class PatientsViewModel extends ViewModel implements PatientsRepository.onFirebaseDatabasePatientsTaskComplete, PatientsRepository.onUserAdded, PatientsRepository.onUserUpdated {
+    private PatientsRepository patientsRepository =new PatientsRepository(this,this,this);
     private MutableLiveData<DataSnapshot> patientMutableLiveData=new MutableLiveData<>();
 
     public MutableLiveData<DataSnapshot> getPatientMutableLiveData() {
@@ -21,7 +21,10 @@ public class PatientsViewModel extends ViewModel implements PatientsRepository.o
     public void addPatient(Users user){
         patientsRepository.addPatient(user);
     }
-
+    public void  updatePatient(Users user)
+    {
+        patientsRepository.updatePatient(user);
+    }
     @Override
     public void patientDataLoaded(DataSnapshot snapshotPatient) {
         patientMutableLiveData.postValue(snapshotPatient);
@@ -36,6 +39,12 @@ public class PatientsViewModel extends ViewModel implements PatientsRepository.o
     @Override
     public boolean onSubmit() {
         return true;
+    }
+
+    @Override
+    public void onErrorUpdated(Exception e) {
+        Log.d("error", "UpdatedPatient:onCancelled: " + e.getMessage());
+
     }
 
     @Override

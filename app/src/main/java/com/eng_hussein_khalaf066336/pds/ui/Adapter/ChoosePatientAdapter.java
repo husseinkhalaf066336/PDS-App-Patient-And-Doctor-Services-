@@ -19,13 +19,13 @@ import java.util.ArrayList;
 
 public class ChoosePatientAdapter extends RecyclerView.Adapter<ChoosePatientAdapter.ChoosePatientHolder> {
 
-    private ArrayList<Users> Patients;
+    private ArrayList<Users> PatientsList;
     OnRecyclerItemClickListener listener;
     private boolean VisibleItem;
 
-    public  ChoosePatientAdapter(ArrayList<Users> Patients, OnRecyclerItemClickListener listener)
+    public  ChoosePatientAdapter(ArrayList<Users> PatientsList, OnRecyclerItemClickListener listener)
     {
-        this.Patients = Patients;
+        this.PatientsList = PatientsList;
         this.listener=listener;
     }
 
@@ -40,23 +40,24 @@ public class ChoosePatientAdapter extends RecyclerView.Adapter<ChoosePatientAdap
 
     @Override
     public void onBindViewHolder(@NonNull ChoosePatientHolder holder, int position) {
-        Users user = Patients.get(position);
+        Users user = PatientsList.get(position);
         Picasso.get().load(user.getUserImage()).into( holder.PatientImage);
         holder.textView_PatientName.setText(user.getUserFullName());
         holder.textView_patientAge.setText(user.getUserDateOfBirth());
         holder.text_Patient_email.setText(user.getUserEmail());
         holder.text_Patient_Address.setText(user.getUserAddress());
         holder.PatientImage.setTag(user.getUserId());
-
-
-
     }
 
     @Override
     public int getItemCount() {
-        return Patients.size();
+        return PatientsList.size();
     }
-
+    public void filterList(ArrayList<Users> patientsFilterList)
+    {
+        PatientsList=patientsFilterList;
+        notifyDataSetChanged();
+    }
     class ChoosePatientHolder extends RecyclerView.ViewHolder
     {
         TextView textView_PatientName, textView_patientAge,text_Patient_email,text_Patient_Address,

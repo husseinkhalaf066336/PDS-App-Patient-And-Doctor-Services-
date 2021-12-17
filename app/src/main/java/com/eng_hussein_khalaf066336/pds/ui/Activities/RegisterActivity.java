@@ -8,7 +8,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.app.DatePickerDialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -20,6 +22,8 @@ import android.widget.DatePicker;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.eng_hussein_khalaf066336.pds.R;
 import com.eng_hussein_khalaf066336.pds.model.CurrentUser;
 import com.eng_hussein_khalaf066336.pds.model.Users;
@@ -36,7 +40,10 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.io.ByteArrayOutputStream;
 import java.util.Calendar;
+import java.util.Objects;
+import java.util.UUID;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -46,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btn_Choose_Age;
     private CircleImageView circleImageView_userImage;
     private String UserId, userName,userEmail,
-           userPassword,confirmPassword,userDateOfBirth,userAddress,userType="user";
+           userPassword,confirmPassword,userDateOfBirth,userAddress,imageUserUri,userType="user";
     private AuthViwModel authViwModel;
     private PatientsViewModel patientsViewModel;
     private ProgressBar progressBar;
@@ -151,6 +158,8 @@ public class RegisterActivity extends AppCompatActivity {
             editText_confirmPassword.setError("Password not match !");
             return;
         }
+        //Check the type of operation
+        //Register an account or edit
         if (optionType=="Register")
         {
             authViwModel.signUp(userEmail,userPassword);
@@ -160,10 +169,10 @@ public class RegisterActivity extends AppCompatActivity {
                     if (firebaseUser!=null)
                     {
                         Toast.makeText(getBaseContext(),"success",Toast.LENGTH_LONG).show();
+                        UserId =firebaseUser.getUid();
                         if (imageUri!=null) {
                             uploadToFirebase(imageUri);}
-                        else {
-                            UserId =firebaseUser.getUid();
+                        else {//register without image
                             Users user = new Users(UserId,userName,userEmail,userPassword,
                                     userDateOfBirth,userAddress,userType,null);
                             patientsViewModel.addPatient(user);
@@ -178,9 +187,19 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             });
         }else
-        {
-            Toast.makeText(getBaseContext(), "Edit",Toast.LENGTH_SHORT).show();
-
+        {//Edit
+            UserId =CurrentUser.getCurrentUserId();
+            if (imageUri!=null) {
+                uploadToFirebase(imageUri);}
+            else {//Edit but the same image
+                Users user = new Users(UserId,userName,userEmail,userPassword,
+                        userDateOfBirth,userAddress,userType,imageUserUri);
+                patientsViewModel.updatePatient(user);
+                Toast.makeText(getBaseContext(), "User update successfully but non image!", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getBaseContext(),HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
         }
 
     }
@@ -195,14 +214,21 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onSuccess(Uri uri) {
                         Users user = new Users(UserId,userName,userEmail,userPassword,
                                 userDateOfBirth,userAddress,userType,uri.toString());
-                        patientsViewModel.addPatient(user);
-                        Toast.makeText(getBaseContext(), "User created successfully!", Toast.LENGTH_SHORT).show();
+                        if (optionType=="Register")
+                        {
+                            patientsViewModel.addPatient(user);
+                            Toast.makeText(getBaseContext(), "User created successfully!", Toast.LENGTH_SHORT).show();
+
+                        }
+                        else {
+                            patientsViewModel.updatePatient(user);
+                            Toast.makeText(getBaseContext(), "User updated successfully!", Toast.LENGTH_SHORT).show();
+                        }
                         progressBar.setVisibility(View.INVISIBLE);
                         Toast.makeText(RegisterActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(getBaseContext(),HomeActivity.class);
                         startActivity(intent);
                         finish();
-                        //imageView_catigory.setImageResource(R.drawable.unnamed);
                     }
                 });
             }
@@ -267,7 +293,7 @@ public class RegisterActivity extends AppCompatActivity {
                     editText_userDateOfBirth.setText(user.getUserDateOfBirth());
                     editText_userAddress.setText(user.getUserAddress());
                     Picasso.get().load(user.getUserImage()).into(circleImageView_userImage);
-
+                    imageUserUri=user.getUserImage();
 
                 }}
         });

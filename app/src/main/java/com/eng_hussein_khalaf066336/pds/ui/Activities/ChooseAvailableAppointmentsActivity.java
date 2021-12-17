@@ -24,11 +24,11 @@ public class ChooseAvailableAppointmentsActivity extends AppCompatActivity {
     private ChooseAvailableAppointment AdapterChooseAvailableAppointment;
     private ArrayList<com.eng_hussein_khalaf066336.pds.model.availableAppointment> availableAppointmentS;
     private AvailableAppointmentsViewModel availableAppointmentsViewModel;
-    public static int DAT_RESULT_CODE=11;
+    public static int DAT_RESULT_CODE = 11;
     private String ID_Current_doctor;
-    public static String NAME_ID_AVAILABLE_APPOINTMENT_CODE="name_id_available_appointment";
-    public static String NAME_DATE_CODE="name_date_code";
-    public static String NAME_TIME_CODE="name_time_code";
+    public static String NAME_ID_AVAILABLE_APPOINTMENT_CODE = "name_id_available_appointment";
+    public static String NAME_DATE_CODE = "name_date_code";
+    public static String NAME_TIME_CODE = "name_time_code";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,23 +36,25 @@ public class ChooseAvailableAppointmentsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choos_availbale_appointments);
         doInitialization();
     }
-    private void doInitialization()
-    {
+
+    private void doInitialization() {
 
         recyclerView = findViewById(R.id.ChoosAvailbaleAppointmentsActivity_recyclerView);
-        availableAppointmentsViewModel =new ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory
+        availableAppointmentsViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
                 .getInstance(this.getApplication())).get(AvailableAppointmentsViewModel.class);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager lm = new GridLayoutManager(getBaseContext(),2);
+        RecyclerView.LayoutManager lm = new GridLayoutManager(getBaseContext(), 2);
         recyclerView.setLayoutManager(lm);
-        availableAppointmentS = new ArrayList<>();
-        AdapterChooseAvailableAppointment = new ChooseAvailableAppointment (availableAppointmentS,new OnRecyclerItemClickChooseListener() {
+        if (availableAppointmentS==null){
+            availableAppointmentS = new ArrayList<>();
+        }
+        AdapterChooseAvailableAppointment = new ChooseAvailableAppointment(availableAppointmentS, new OnRecyclerItemClickChooseListener() {
             @Override
             public void onItemClick(String id, String date, String Time) {
                 Intent intent = new Intent();
-                intent.putExtra(NAME_ID_AVAILABLE_APPOINTMENT_CODE,id);
-                intent.putExtra(NAME_DATE_CODE,date);
-                intent.putExtra(NAME_TIME_CODE,Time);
+                intent.putExtra(NAME_ID_AVAILABLE_APPOINTMENT_CODE, id);
+                intent.putExtra(NAME_DATE_CODE, date);
+                intent.putExtra(NAME_TIME_CODE, Time);
                 setResult(DAT_RESULT_CODE, intent);
                 finish();
 
@@ -60,22 +62,19 @@ public class ChooseAvailableAppointmentsActivity extends AppCompatActivity {
 
         });
         recyclerView.setAdapter(AdapterChooseAvailableAppointment);
-        ID_Current_doctor=getIntent().getStringExtra(BookAppointmentActivity.ID_NAME_DOCTOR_CODE);
+        ID_Current_doctor = getIntent().getStringExtra(BookAppointmentActivity.ID_NAME_DOCTOR_CODE);
         getAvailableAppointments(ID_Current_doctor);
     }
-    private void getAvailableAppointments(String ID_doctor)
-    {
-        if (availableAppointmentS!=null)
-        {
-            availableAppointmentS.clear();
-        }
+
+    private void getAvailableAppointments(String ID_doctor) {
+        availableAppointmentS.clear();
         availableAppointmentsViewModel.getAvailableAppointments(ID_doctor);
         availableAppointmentsViewModel.getMutableLiveDataAvailableAppointments().observe(this, new Observer<DataSnapshot>() {
             @Override
             public void onChanged(DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     // TODO: handle the post
-                    availableAppointment availableAppointment=  postSnapshot.getValue(availableAppointment.class);
+                    availableAppointment availableAppointment = postSnapshot.getValue(availableAppointment.class);
                     availableAppointmentS.add(availableAppointment);
                 }
 

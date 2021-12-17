@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.eng_hussein_khalaf066336.pds.R;
 import com.eng_hussein_khalaf066336.pds.model.CurrentUser;
 import com.eng_hussein_khalaf066336.pds.model.Doctors;
+import com.eng_hussein_khalaf066336.pds.model.Users;
 import com.eng_hussein_khalaf066336.pds.ui.Fragments.DashboardDoctorFragment;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.AuthViwModel;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.DoctorsViewModel;
@@ -36,6 +37,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.Calendar;
 
@@ -49,7 +51,7 @@ public class NewDoctorActivity extends AppCompatActivity {
     private Switch admin_Switch;
     private CircleImageView circleImageView_doctorImage;
     private String doctorId,doctorFullName ,doctorEmail, doctorPassword,  doctorConfirmPassword,doctorDateOfBirth, doctorAddress,
-            doctorSpecialization, doctorFunctionalSection, doctorAbout_the_doctor, doctorType;
+            doctorSpecialization, doctorFunctionalSection, doctorAbout_the_doctor,imageDoctorUri, doctorType;
     private DoctorsViewModel doctorsViewModel;
     private AuthViwModel authViwModel;
     private ProgressBar progressBar;
@@ -106,6 +108,7 @@ public class NewDoctorActivity extends AppCompatActivity {
         if (optionType=="EditDoctorProfile")
         {
             getDoctor(CurrentUser.getCurrentUserId());
+            admin_Switch.setVisibility(View.GONE);
         }
 
     }
@@ -198,7 +201,18 @@ public class NewDoctorActivity extends AppCompatActivity {
 
         }
         else {
-
+            doctorId =CurrentUser.getCurrentUserId();
+            if (imageUri!=null) {
+                uploadToFirebase(imageUri);}
+            else {//Edit but the same image
+                Doctors doctor = new Doctors(doctorId,doctorFullName,doctorEmail,doctorPassword,
+                        doctorDateOfBirth,doctorAddress,doctorSpecialization,doctorFunctionalSection
+                        ,doctorAbout_the_doctor,doctorType,imageDoctorUri);
+                updateDoctor(doctor);
+                Intent intent=new Intent(getBaseContext(),HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
         }
 
     }
@@ -217,9 +231,16 @@ public class NewDoctorActivity extends AppCompatActivity {
                         Doctors doctor = new Doctors(doctorId,doctorFullName,doctorEmail,doctorPassword,
                                 doctorDateOfBirth,doctorAddress,doctorSpecialization,doctorFunctionalSection
                                 ,doctorAbout_the_doctor,doctorType,uri.toString());
-                        addDoctor(doctor);
+                        if (optionType=="")
+                        {
+                            addDoctor(doctor);
+                            Toast.makeText(NewDoctorActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+
+                        }
+                        else {
+                            updateDoctor(doctor);
+                        }
                         progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(NewDoctorActivity.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
                         finish();
                     }
                 });
@@ -271,7 +292,10 @@ public class NewDoctorActivity extends AppCompatActivity {
     }
     private void addDoctor(Doctors doctor) {
         doctorsViewModel.addDoctor(doctor);
-        Toast.makeText(getBaseContext(), "doctor created successfully but non image! ", Toast.LENGTH_SHORT).show();
+    }
+    private void updateDoctor(Doctors doctor) {
+        doctorsViewModel.updateDoctor(doctor);
+        Toast.makeText(getBaseContext(), " updated successfully ", Toast.LENGTH_SHORT).show();
     }
     public void getDoctor(String doctorId) {
         doctorsViewModel.getDoctor(doctorId);
@@ -290,6 +314,8 @@ public class NewDoctorActivity extends AppCompatActivity {
                     editText_doctorSpecialization.setText(doctor.getDoctorSpecialization());
                     editText_doctorFunctionalSection.setText(doctor.getDoctorFunctionalSection());
                     editText_doctorAbout_the_doctor.setText(doctor.getDoctorAbout_the_doctor());
+                    Picasso.get().load(doctor.getDoctorImage()).into(circleImageView_doctorImage);
+                    imageDoctorUri=doctor.getDoctorImage();
                 }
             }
         });

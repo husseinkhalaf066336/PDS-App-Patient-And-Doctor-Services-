@@ -1,8 +1,15 @@
 package com.eng_hussein_khalaf066336.pds.ui.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +29,7 @@ public class MedicalReportActivity extends AppCompatActivity implements View.OnC
     private String ReportTitle,ReportDetails,DoctorsInstructions,
             SuggestedMedication,ID_Current_Patient,ID_Current_doctor ;
     private MedicalReportViewModel medicalReportViewModel;
+    public static String channelID = "X_channelIDReport";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +57,8 @@ public class MedicalReportActivity extends AppCompatActivity implements View.OnC
     {
         medicalReportViewModel.addReport(medicalReport);
         Toast.makeText(getBaseContext(), "MedicalReports created successfully", Toast.LENGTH_SHORT).show();
-        emptyFields();
+        GoToShowMedicalReport();
+        displayNotification();
     }
 
     @Override
@@ -83,7 +92,7 @@ public class MedicalReportActivity extends AppCompatActivity implements View.OnC
                 DoctorsInstructions,SuggestedMedication,ID_Current_Patient,ID_Current_doctor);
         addReport(medicalReport);
     }
-    public void emptyFields()
+    public void GoToShowMedicalReport()
     {
         ReportTitle.isEmpty();
         ReportDetails.isEmpty();
@@ -93,6 +102,30 @@ public class MedicalReportActivity extends AppCompatActivity implements View.OnC
         eitText_ReportDetails.setText(" ");
         eitText_DoctorsInstructions.setText(" ");
         editText_SuggestedMedications.setText(" ");
+        Intent intent_show_appointment = new Intent(getBaseContext(), ShowMedicalReportActivity.class);
+        startActivity(intent_show_appointment);
+        ShowMedicalReportActivity.userType="doctor";
+        finish();
     }
+    private void displayNotification() {
+        Intent intent = new Intent(getBaseContext(), ShowAppointmentsActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, intent, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(channelID, "channel_display_Appointment",
+                    NotificationManager.IMPORTANCE_HIGH);
+            channel.setDescription("Description");
+            NotificationManager NM = getSystemService(NotificationManager.class);
+            NM.createNotificationChannel(channel);
+        }
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getBaseContext(), channelID);
+        builder.setSmallIcon(R.drawable.ic_report2red)
+                .setContentTitle(getString(R.string.TitleNotification)).setContentText(getString(R.string.TextNotificationReport)).setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(getString(R.string.app_name)))
+                .setContentIntent(pendingIntent).addAction(R.drawable.ic_report2red, getString(R.string.pendingIntentNotificationReport), pendingIntent);
+        NotificationManagerCompat NMC = NotificationManagerCompat.from(getBaseContext());
+        NMC.notify(10, builder.build());
+
+    }
+
 }
 

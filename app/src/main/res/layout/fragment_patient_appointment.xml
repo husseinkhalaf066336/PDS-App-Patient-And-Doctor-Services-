@@ -337,7 +337,7 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/r1"
-                    android:background="@drawable/shap_cardview_dahpord4"
+                    android:background="@drawable/shap_cardview_dahpord3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 

@@ -93,8 +93,8 @@
 
             <TextView
                 android:id="@+id/UserProfile_txt_Email"
-                android:layout_width="55dp"
-                android:layout_height="38dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/andika"
                 android:gravity="center"
                 android:text="email"
@@ -141,7 +141,7 @@
                 android:layout_marginStart="@dimen/_3sdp"
                 android:background="@drawable/shap_heiding_text"
                 android:gravity="center"
-                android:text="@string/DoctorAppointmentFragment_TextView_Appointment"
+                android:text="@string/AppointmentFragment_TextView_Appointment"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/_24ssp" />
 
@@ -150,9 +150,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:textSize="@dimen/_24ssp"
+                android:textSize="@dimen/_18ssp"
                 app:cornerRadius="@dimen/_10sdp"
-                android:text="@string/UserProfile_Btn_ViewAppointments" />
+                android:text="@string/PatientAppointmentFragment_TextView_ShowAppointment1" />
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"

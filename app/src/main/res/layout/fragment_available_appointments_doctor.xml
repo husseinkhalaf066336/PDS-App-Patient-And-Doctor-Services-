@@ -8,7 +8,8 @@
     tools:context=".ui.Fragments.AvailableAppointmentsDoctorFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/collapsingToolbarLayout2"
@@ -23,8 +24,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/relativeLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="?actionBarSize"
+
+                android:layout_height="wrap_content"
                 android:paddingLeft="25dp"
                 android:paddingTop="30dp"
                 android:paddingRight="25dp"
@@ -38,7 +40,7 @@
                     android:id="@+id/t1"
                     android:layout_width="194dp"
                     android:layout_height="42dp"
-                    android:text="@string/DoctorAppointmentFragment_TextView_Welcome"
+                    android:text="@string/AppointmentFragment_TextView_Welcome"
                     android:textColor="#fff"
                     android:textSize="@dimen/_24ssp"
                     app:layout_constraintEnd_toStartOf="@+id/imageView6"
@@ -54,7 +56,7 @@
                     android:layout_alignEnd="@+id/t1"
                     android:fontFamily="sans-serif-black"
                     android:letterSpacing="0.04"
-                    android:text="@string/DoctorAppointmentFragment_TextView_Appointment"
+                    android:text="@string/AppointmentFragment_TextView_Appointment"
                     android:textColor="#fff"
                     android:textSize="28dp"
                     app:layout_constraintEnd_toEndOf="@+id/t1"
@@ -298,7 +300,7 @@
                         android:layout_margin="@dimen/_10sdp"
                         android:fontFamily="sans-serif-black"
                         android:letterSpacing="0.03"
-                        android:text="@string/DoctorAppointmentFragment_TextView_NEWAppointment1"
+                        android:text="@string/AppointmentFragment_TextView_NEWAppointment1"
                         android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold"
@@ -336,7 +338,7 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/r1"
-                    android:background="@drawable/shap_cardview_dahpord4"
+                    android:background="@drawable/shap_cardview_dahpord3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -357,12 +359,12 @@
                         android:layout_height="77dp"
                         android:layout_margin="@dimen/_10sdp"
                         android:fontFamily="sans-serif-black"
+                        android:gravity="center"
                         android:letterSpacing="0.03"
-                        android:text="@string/DoctorAppointmentFragment_TextView_ShowAppointment1"
+                        android:text="@string/AppointmentFragment_TextView_ShowAppointment1"
                         android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold"
-                        android:gravity="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/view3"
                         app:layout_constraintStart_toEndOf="@+id/i1"

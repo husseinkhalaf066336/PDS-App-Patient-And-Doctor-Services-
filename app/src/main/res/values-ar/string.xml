@@ -119,12 +119,12 @@
     <string name="PatientAppointmentFragment_TextView_NEWAppointment1">اضافة موعد جديد</string>
     <string name="PatientAppointmentFragment_TextView_ShowAppointment1">عـرض مواعــيدي</string>
 
-    <!--    Patient Appointment Fragment-->
-    <string name="DoctorAppointmentFragment_TextView_Welcome">مرحبا بك في</string>
-    <string name="DoctorAppointmentFragment_TextView_Appointment">المـــــواعـــيــــــد</string>
-    <string name="DoctorAppointmentFragment_TextView_Appointment1">موعيدك</string>
-    <string name="DoctorAppointmentFragment_TextView_NEWAppointment1">اضافة موعد جديد</string>
-    <string name="DoctorAppointmentFragment_TextView_ShowAppointment1">عـرض مواعــيدي</string>
+    <!--    doctor Appointment Fragment-->
+    <string name="AppointmentFragment_TextView_Welcome">مرحبا بك في</string>
+    <string name="AppointmentFragment_TextView_Appointment">المـــــواعـــيــــــد</string>
+    <string name="AppointmentFragment_TextView_Appointment1">موعيدك</string>
+    <string name="AppointmentFragment_TextView_NEWAppointment1">اضافة موعد جديد</string>
+    <string name="AppointmentFragment_TextView_ShowAppointment1"> عـرض مواعــيدي المتاحة</string>
 
 
     <!--  MideclalReportFragment-->
@@ -137,8 +137,10 @@
     <!--  UserProfile-->
     <string name="UserProfile_TextView_welcome">اهلن بك في ملفك الشخصي</string>
     <string name="UserProfile_Btn_edit_profile"> تعديل ملفك الشخصي</string>
-    <string name="UserProfile_Btn_ViewAppointments">عرض مواعيدي</string>
+    <string name="UserProfile_Btn_ViewAppointments">عرض مواعيدي المتاحة</string>
     <string name="UserProfile_Btn_ViewMedicalReport">عرض تقاريري الطبية</string>
+    <string name="DoctorProfile_btn_add_new_doctor">اضافة طببيب جديد</string>
+
 
     <!--Languge-->
     <string name="LangugeActivity_txtview">بأكمانك تغير اللغة  </string>
@@ -148,7 +150,6 @@
     <!--Home_menu-->
     <string name="Home_menu_Home">الرئيسية</string>
     <string name="Home_menu_Appointments">المواعيد </string>
-    <string name="Home_menu_Diagnoses">التشخيص</string>
     <string name="Home_menu_MedicalReport">التقارير</string>
     <string name="Home_menu_language">اللغة</string>
     <string name="Home_menu_management">ادراة المستخدمين</string>
@@ -156,6 +157,17 @@
     <string name="Home_menu_Logout">تسجيل الخروج</string>
     <!--searche_menu-->
     <string name="search_menu">بحث </string>
+
+    <!--Notification-->
+    <string name="TitleNotification">تطبيق خدمات المرضى والأطباء </string>
+    <string name="TextNotificationAppointment">تم حجز موعد لك عند الطبيب أنقر ليتم عرضه  </string>
+    <string name="pendingIntentNotificationAppointment">فتح قائمة المواعيد </string>
+    <string name="TextNotificationAvailableAppointments">تم إنشاء موعد متاح ليتمكن المرضى من حجزه عندك أنقر ليتم عرضه </string>
+    <string name="pendingIntentNotificationAvailableAppointments">فتح قائمة مواعيدك المتاحة </string>
+    <string name="TextNotificationReport">تم انشاء تقرير طبي بنجاح أنقر ليتم عرضه </string>
+    <string name="pendingIntentNotificationReport">فتح قائمة تقاريرك الطبية </string>
+    //permission
+    <string name="Not_permission">ليس لديك الصلاحية بالدخول </string>
 
 
 

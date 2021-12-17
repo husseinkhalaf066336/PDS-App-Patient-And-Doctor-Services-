@@ -19,9 +19,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextInputEditText editText_email, editText_password;
-    Button button_login, button_register;
-    String email, password;
+    private TextInputEditText editText_email, editText_password;
+    private Button button_login, button_register;
+    private String email, password;
     private AuthViwModel authViwModel;
     private FirebaseUser currentUser;
     public static DialogWaitFragment dialogWaitFragment;

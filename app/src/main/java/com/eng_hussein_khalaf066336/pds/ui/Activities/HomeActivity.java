@@ -21,14 +21,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eng_hussein_khalaf066336.pds.model.CurrentUser;
+import com.eng_hussein_khalaf066336.pds.ui.Fragments.AvailableAppointmentsDoctorFragment;
 import com.eng_hussein_khalaf066336.pds.ui.Fragments.DialogFragment;
 import com.eng_hussein_khalaf066336.pds.ui.Fragments.DashboardDoctorFragment;
 import com.eng_hussein_khalaf066336.pds.ui.Fragments.DashboardUserFragment;
 import com.eng_hussein_khalaf066336.pds.ui.Fragments.DoctorMedicalReportFragment;
+import com.eng_hussein_khalaf066336.pds.ui.Fragments.PatientsAppointmentsFragment;
 import com.eng_hussein_khalaf066336.pds.ui.Fragments.UserMedicalReportFragment;
 import com.eng_hussein_khalaf066336.pds.R;
 import com.eng_hussein_khalaf066336.pds.model.Doctors;
 import com.eng_hussein_khalaf066336.pds.model.Users;
+import com.eng_hussein_khalaf066336.pds.ui.Fragments.languageFragment;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.AuthViwModel;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.DoctorsViewModel;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.PatientsViewModel;
@@ -37,7 +40,7 @@ import com.google.firebase.database.DataSnapshot;
 
 public class HomeActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener,
         DialogFragment.onPositiveClickListener,DialogFragment.onNegativeClickListener {
-    TextView textView_UserName, textView_UserEmail;
+    private TextView textView_UserName, textView_UserEmail;
     private String UserName, UserEmail;
     public static String userId, UserType;
     private Toolbar toolbar;
@@ -149,14 +152,14 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
             case R.id.Appointments:
                 if (UserType.equals("user"))
                 {
-
+                    fragment=new PatientsAppointmentsFragment();
+                    loadFragment(fragment);
                 }
                 if (UserType.equals("doctor")||UserType.equals("admin"))
-
                 {
+                    fragment=new AvailableAppointmentsDoctorFragment();
+                    loadFragment(fragment);
                 }
-                return true;
-            case R.id.Diagnoses:
                 return true;
 
             case R.id.MedicalReport:
@@ -171,7 +174,6 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
                     fragment = new DoctorMedicalReportFragment();
                     loadFragment(fragment);
                 }
-
                 return true;
 
             case R.id.MyProfile:
@@ -191,13 +193,13 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
             case R.id._management:
                 if (UserType.equals("user"))
                 {
-                    Toast.makeText(this, "ليس لديك الصلاحية بالدخول ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.Not_permission), Toast.LENGTH_SHORT).show();
 
                 }
                 if (UserType.equals("doctor"))
 
                 {
-                    Toast.makeText(this, "ليس لديك الصلاحية بالدخول ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.Not_permission), Toast.LENGTH_SHORT).show();
 
                 }
                 if (UserType.equals("admin"))
@@ -209,9 +211,11 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
                 }
                 return true;
             case  R.id.App_language:
-                Intent intent_language = new Intent(getBaseContext(), LanguagActivity.class);
-                startActivity(intent_language);
-                finish();
+                fragment = new languageFragment();
+                loadFragment(fragment);
+//                Intent intent_language = new Intent(getBaseContext(), LanguagActivity.class);
+//                startActivity(intent_language);
+//                finish();
                 return true;
             case R.id.Logout:
                 DialogFragment dialogFragmentLogout = DialogFragment.newInstance("Logout","are you sure?"

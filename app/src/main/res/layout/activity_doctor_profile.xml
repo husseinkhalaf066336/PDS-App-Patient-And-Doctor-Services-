@@ -139,18 +139,18 @@
                 android:layout_marginStart="@dimen/_3sdp"
                 android:background="@drawable/shap_heiding_text"
                 android:gravity="center"
-                android:text="@string/AvailableAppointmentsActivity_TextView_container"
+                android:text="@string/AppointmentFragment_TextView_Appointment"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/_24ssp" />
 
             <Button
-                android:id="@+id/DoctorProfile_btn_ShowAvailableAppointment"
+                android:id="@+id/DoctorProfile_btn_ShowAppointment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:textSize="@dimen/_24ssp"
-                app:cornerRadius="@dimen/_10sdp"
-                android:text="@string/UserProfile_Btn_ViewAppointments" />
+                android:text="@string/PatientAppointmentFragment_TextView_ShowAppointment1"
+                android:textSize="@dimen/_18ssp"
+                app:cornerRadius="@dimen/_10sdp" />
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -161,7 +161,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/view">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/DoctorProfile_rv_ShowAvailableAppointment"
+                    android:id="@+id/DoctorProfile_rv_ShowAppointment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -192,18 +192,18 @@
                 android:layout_marginStart="@dimen/_3sdp"
                 android:background="@drawable/shap_heiding_text"
                 android:gravity="center"
-                android:text="@string/DoctorAppointmentFragment_TextView_Appointment"
+                android:text="@string/AvailableAppointmentsActivity_TextView_container"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/_24ssp" />
 
             <Button
-                android:id="@+id/DoctorProfile_btn_ShowAppointment"
+                android:id="@+id/DoctorProfile_btn_ShowAvailableAppointment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:textSize="@dimen/_24ssp"
+                android:textSize="@dimen/_18ssp"
                 app:cornerRadius="@dimen/_10sdp"
-                android:text="@string/UserProfile_Btn_ViewAppointments" />
+                android:text="@string/AppointmentFragment_TextView_ShowAppointment1" />
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -214,7 +214,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/view">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/DoctorProfile_rv_ShowAppointment"
+                    android:id="@+id/DoctorProfile_rv_ShowAvailableAppointment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 

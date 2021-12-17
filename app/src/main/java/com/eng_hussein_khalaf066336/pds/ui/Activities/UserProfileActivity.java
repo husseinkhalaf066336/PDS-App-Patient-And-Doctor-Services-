@@ -33,14 +33,14 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UserProfileActivity extends AppCompatActivity {
-    private Button btn_ShowAppointment ,btn_ShowMedicalReport,btn_EditProfile;
-    private RecyclerView rv_ShowAppointment , rv_ShowMedicalReport;
-    private TextView textView_userName,textViewEmail;
+    private Button btn_ShowAppointment, btn_ShowMedicalReport, btn_EditProfile;
+    private RecyclerView rv_ShowAppointment, rv_ShowMedicalReport;
+    private TextView textView_userName, textViewEmail;
     private CircleImageView circleImageViewUser;
-    private boolean rv_ShowAppointment_visible=false;
-    private boolean rv_ShowMedicalReport_visible=false;
+    private boolean rv_ShowAppointment_visible = false;
+    private boolean rv_ShowMedicalReport_visible = false;
     private ShowUserAppointmentsAdapter ShowUserAppointmentsAdapter;
-    private ArrayList<appointments> AppointmentS;
+    private ArrayList<appointments> AppointmentList;
     private AppointmentsViewModel appointmentsViewModel;
     private MedicalReportViewModel medicalReportViewModel;
     private ShowUserReportsAdapter showUserReportsAdapter;
@@ -57,59 +57,59 @@ public class UserProfileActivity extends AppCompatActivity {
         doInitializationForReports();
 
     }
+
     private void doInitializationForEditUserProfile() {
 
         //EditProfile
-        patientsViewModel =new ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory
+        patientsViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
                 .getInstance(this.getApplication())).get(PatientsViewModel.class);
-        textView_userName =findViewById(R.id.UserProfile_txt_userName);
-        textViewEmail =findViewById(R.id.UserProfile_txt_Email);
-        circleImageViewUser =findViewById(R.id.UserProfile_imageView_user);
-        btn_EditProfile =findViewById(R.id.UserProfile_btn_EditProfile);
-        ID_Current_user= CurrentUser.getCurrentUserId();
+        textView_userName = findViewById(R.id.UserProfile_txt_userName);
+        textViewEmail = findViewById(R.id.UserProfile_txt_Email);
+        circleImageViewUser = findViewById(R.id.UserProfile_imageView_user);
+        btn_EditProfile = findViewById(R.id.UserProfile_btn_EditProfile);
+        ID_Current_user = CurrentUser.getCurrentUserId();
         getPatient(ID_Current_user);
         btn_EditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(),RegisterActivity.class);
+                Intent intent = new Intent(getBaseContext(), RegisterActivity.class);
                 startActivity(intent);
-                RegisterActivity.optionType="EditUserProfile";
+                RegisterActivity.optionType = "EditUserProfile";
             }
         });
     }
 
-    private void doInitializationForAppointments()
-    {
+    private void doInitializationForAppointments() {
         // appointments
-        appointmentsViewModel =new ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory
+        appointmentsViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
                 .getInstance(this.getApplication())).get(AppointmentsViewModel.class);
-        btn_ShowAppointment =findViewById(R.id.UserProfile_btn_ShowAppointment);
-        rv_ShowAppointment =findViewById(R.id.UserProfile_rv_ShowAppointment);
+        btn_ShowAppointment = findViewById(R.id.UserProfile_btn_ShowAppointment);
+        rv_ShowAppointment = findViewById(R.id.UserProfile_rv_ShowAppointment);
         rv_ShowAppointment.setVisibility(View.GONE);
 
         btn_ShowAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (rv_ShowAppointment_visible==false)
-                {
+                if (rv_ShowAppointment_visible == false) {
                     rv_ShowAppointment.setVisibility(View.VISIBLE);
-                    rv_ShowAppointment_visible=true;
-                }
-                else
-                {
+                    rv_ShowAppointment_visible = true;
+                } else {
                     rv_ShowAppointment.setVisibility(View.GONE);
-                    rv_ShowAppointment_visible=false;
+                    rv_ShowAppointment_visible = false;
                 }
             }
         });
         rv_ShowAppointment.setHasFixedSize(true);
         RecyclerView.LayoutManager lm = new LinearLayoutManager(getBaseContext());
         rv_ShowAppointment.setLayoutManager(lm);
-        AppointmentS = new ArrayList<>();
-        ShowUserAppointmentsAdapter  = new ShowUserAppointmentsAdapter(AppointmentS, new OnRecyclerItemClickListener() {
+        if (AppointmentList == null) {
+            AppointmentList = new ArrayList<>();
+
+        }
+        ShowUserAppointmentsAdapter = new ShowUserAppointmentsAdapter(AppointmentList, new OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(String id) {
-                Toast.makeText(getBaseContext(), ""+id, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "" + id, Toast.LENGTH_SHORT).show();
 
             }
 
@@ -120,31 +120,29 @@ public class UserProfileActivity extends AppCompatActivity {
 
     private void doInitializationForReports() {
         //MedicalReport
-        medicalReportViewModel =new ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory
+        medicalReportViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
                 .getInstance(this.getApplication())).get(MedicalReportViewModel.class);
-        btn_ShowMedicalReport =findViewById(R.id.UserProfile_btn_ShowMedicalReport);
-        rv_ShowMedicalReport =findViewById(R.id.UserProfile_rv_ShowMedicalReport);
+        btn_ShowMedicalReport = findViewById(R.id.UserProfile_btn_ShowMedicalReport);
+        rv_ShowMedicalReport = findViewById(R.id.UserProfile_rv_ShowMedicalReport);
         rv_ShowMedicalReport.setVisibility(View.GONE);
         btn_ShowMedicalReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (rv_ShowMedicalReport_visible==false)
-                {
+                if (rv_ShowMedicalReport_visible == false) {
                     rv_ShowMedicalReport.setVisibility(View.VISIBLE);
-                    rv_ShowMedicalReport_visible=true;
-                }
-                else
-                {
+                    rv_ShowMedicalReport_visible = true;
+                } else {
                     rv_ShowMedicalReport.setVisibility(View.GONE);
-                    rv_ShowMedicalReport_visible=false;
+                    rv_ShowMedicalReport_visible = false;
                 }
             }
         });
         rv_ShowMedicalReport.setHasFixedSize(true);
         RecyclerView.LayoutManager lm_report = new LinearLayoutManager(getBaseContext());
         rv_ShowMedicalReport.setLayoutManager(lm_report);
-
-        reportArrayList = new ArrayList<>();
+        if (reportArrayList == null) {
+            reportArrayList = new ArrayList<>();
+        }
         showUserReportsAdapter = new ShowUserReportsAdapter(reportArrayList, new OnRecyclerItemClickChooseListener() {
             @Override
             public void onItemClick(String id, String date, String Time) {
@@ -154,55 +152,49 @@ public class UserProfileActivity extends AppCompatActivity {
         getMedicalReport(ID_Current_user);
 
     }
+
     public void getPatient(String patientId) {
         patientsViewModel.getPatient(patientId);
         patientsViewModel.getPatientMutableLiveData().observe(this, new Observer<DataSnapshot>() {
             @Override
             public void onChanged(DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshotPatient :dataSnapshot.getChildren())
-                {
-                    Users user=  snapshotPatient.getValue(Users.class);
+                for (DataSnapshot snapshotPatient : dataSnapshot.getChildren()) {
+                    Users user = snapshotPatient.getValue(Users.class);
                     textView_userName.setText(user.getUserFullName());
-                    textViewEmail.setText(user.getUserType());
+                    textViewEmail.setText(user.getUserEmail());
                     Picasso.get().load(user.getUserImage()).into(circleImageViewUser);
 
-                }}
+                }
+            }
         });
     }
-    private void getAppointment(String UserId)
-    {
-        if (AppointmentS!=null)
-        {
-            AppointmentS.clear();
-        }
+
+    private void getAppointment(String UserId) {
+        AppointmentList.clear();
         appointmentsViewModel.getPatientAppointment(UserId);
         appointmentsViewModel.getMutableLiveDataPatientAppointment().observe(this, new Observer<DataSnapshot>() {
             @Override
             public void onChanged(DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     // TODO: handle the post
-                    appointments appointment=  postSnapshot.getValue(appointments.class);
-                    AppointmentS.add(appointment);
+                    appointments appointment = postSnapshot.getValue(appointments.class);
+                    AppointmentList.add(appointment);
                 }
 
                 ShowUserAppointmentsAdapter.notifyDataSetChanged();
             }
         });
-
     }
-    private void getMedicalReport(String UserId)
-    {
-        if (reportArrayList!=null)
-        {
-            reportArrayList.clear();
-        }
+
+    private void getMedicalReport(String UserId) {
+        reportArrayList.clear();
         medicalReportViewModel.getMedicalReportForPatient(UserId);
         medicalReportViewModel.getMutableLiveDataPatientReport().observe(this, new Observer<DataSnapshot>() {
             @Override
             public void onChanged(DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     // TODO: handle the post
-                    MedicalReport medicalReport=  postSnapshot.getValue(MedicalReport.class);
+                    MedicalReport medicalReport = postSnapshot.getValue(MedicalReport.class);
                     reportArrayList.add(medicalReport);
                 }
                 showUserReportsAdapter.notifyDataSetChanged();

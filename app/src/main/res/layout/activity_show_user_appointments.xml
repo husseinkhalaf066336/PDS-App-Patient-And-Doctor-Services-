@@ -98,6 +98,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/show_user_appointmentActivity_recyclerView"
                     android:layout_width="match_parent"
+                    tools:listitem="@layout/cardview_show_user_appointments"
                     android:layout_height="match_parent">
 
                 </androidx.recyclerview.widget.RecyclerView>

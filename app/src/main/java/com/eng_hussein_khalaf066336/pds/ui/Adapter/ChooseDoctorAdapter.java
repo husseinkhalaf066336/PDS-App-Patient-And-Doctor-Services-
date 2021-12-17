@@ -18,13 +18,13 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class ChooseDoctorAdapter extends  RecyclerView.Adapter <ChooseDoctorAdapter.chooseDoctorHolder> {
-    private ArrayList<Doctors> doctors ;
+    private ArrayList<Doctors> doctorsArrayList;
     private OnRecyclerItemClickListener listener;
     private boolean VisibleItem;
-    public  ChooseDoctorAdapter(ArrayList<Doctors> doctors, OnRecyclerItemClickListener listener)
+    public  ChooseDoctorAdapter( ArrayList<Doctors> doctorsArrayList,OnRecyclerItemClickListener listener)
     {
-        this.doctors = doctors;
         this.listener=listener;
+        this.doctorsArrayList = doctorsArrayList;
     }
 
     @NonNull
@@ -37,7 +37,7 @@ public class ChooseDoctorAdapter extends  RecyclerView.Adapter <ChooseDoctorAdap
 
     @Override
     public void onBindViewHolder(@NonNull chooseDoctorHolder holder, int position) {
-        Doctors doctor = doctors.get(position);
+        Doctors doctor = doctorsArrayList.get(position);
         Picasso.get().load(doctor.getDoctorImage()).into( holder.doctorImage);
         holder.textView_doctorName.setText(doctor.getDoctorFullName());
         holder.textView_doctorSpecialization.setText(doctor.getDoctorSpecialization());
@@ -49,9 +49,13 @@ public class ChooseDoctorAdapter extends  RecyclerView.Adapter <ChooseDoctorAdap
 
     @Override
     public int getItemCount() {
-        return doctors.size();
+        return doctorsArrayList.size();
     }
-
+    public void filterList(ArrayList<Doctors> doctorsFilterList)
+    {
+        doctorsArrayList =doctorsFilterList;
+        notifyDataSetChanged();
+    }
     class chooseDoctorHolder extends RecyclerView.ViewHolder
     {
         TextView textView_doctorName, textView_doctorSpecialization,

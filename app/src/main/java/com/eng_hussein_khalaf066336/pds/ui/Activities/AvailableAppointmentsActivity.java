@@ -1,10 +1,17 @@
 package com.eng_hussein_khalaf066336.pds.ui.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -24,10 +31,11 @@ import java.util.Calendar;
 
 public class AvailableAppointmentsActivity extends AppCompatActivity {
     private AvailableAppointmentsViewModel availableAppointmentsViewModel;
-    TextInputEditText editText_DateAppointment,editText_TimeAppointment;
-    Button ButtonDateAppointment,ButtonTimeAppointment,ButtonSaveAppointment;
-    String DateAppointment,TimeAppointment,
+    private TextInputEditText editText_DateAppointment,editText_TimeAppointment;
+    private Button ButtonDateAppointment,ButtonTimeAppointment,ButtonSaveAppointment;
+    private String DateAppointment,TimeAppointment,
             availableAppointmentDoctorId;
+    public static String channelID = "X_channelIDAvailableAppointments";
     private ArrayList<com.eng_hussein_khalaf066336.pds.model.availableAppointment> availableAppointments;
 
     @Override
@@ -86,7 +94,8 @@ public class AvailableAppointmentsActivity extends AppCompatActivity {
     {
         availableAppointmentsViewModel.addAvailableAppointment(availableAppointment);
         Toast.makeText(getBaseContext(), "availableAppointmentId created successfully", Toast.LENGTH_SHORT).show();
-        emptyFields();
+        GoToShowAvailableAppointment();
+        displayNotification();
     }
     private void handleDate() {
         Calendar calendar = Calendar.getInstance();
@@ -127,11 +136,33 @@ public class AvailableAppointmentsActivity extends AppCompatActivity {
 
         timePickerDialog.show();    }
 
-   public void emptyFields()
+   public void GoToShowAvailableAppointment()
    {
        DateAppointment.isEmpty();
        TimeAppointment.isEmpty();
        editText_DateAppointment.setText(" ");
        editText_TimeAppointment.setText(" ");
+       Intent intent=new Intent(getBaseContext(),ShowAvailableAppointmentsActivity.class);
+       startActivity(intent);
+       finish();
    }
+    private void displayNotification() {
+        Intent intent = new Intent(getBaseContext(), ShowAppointmentsActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, intent, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(channelID, "channel_display_Appointment",
+                    NotificationManager.IMPORTANCE_HIGH);
+            channel.setDescription("Description");
+            NotificationManager NM = getSystemService(NotificationManager.class);
+            NM.createNotificationChannel(channel);
+        }
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getBaseContext(), channelID);
+        builder.setSmallIcon(R.drawable.ic_clock1)
+                .setContentTitle(getString(R.string.TitleNotification)).setContentText(getString(R.string.TextNotificationAvailableAppointments)).setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(getString(R.string.app_name)))
+                .setContentIntent(pendingIntent).addAction(R.drawable.ic_clock1, getString(R.string.pendingIntentNotificationAvailableAppointments), pendingIntent);
+        NotificationManagerCompat NMC = NotificationManagerCompat.from(getBaseContext());
+        NMC.notify(10, builder.build());
+
+    }
 }

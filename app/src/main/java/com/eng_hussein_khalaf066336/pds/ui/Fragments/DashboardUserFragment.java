@@ -19,8 +19,8 @@ import com.eng_hussein_khalaf066336.pds.ui.Activities.UserProfileActivity;
 
 public class DashboardUserFragment extends Fragment {
 
-    CardView cardView_appointment,cardView_diagnoses,cardViewUsereMedicalReport,cardView4;
-    Fragment fragment = null;
+    private CardView cardView_appointment, cardView_ShowAppointment,cardViewUsereMedicalReport,cardView4;
+    private Fragment fragment = null;
 
 
     public DashboardUserFragment() {
@@ -32,21 +32,20 @@ public class DashboardUserFragment extends Fragment {
         // Inflate the layout for this fragment
        View v = inflater.inflate(R.layout.fragment_dashboard_user, container, false);
         cardView_appointment=v.findViewById(R.id.cardViewDashboardUser1);
-        cardView_diagnoses=v.findViewById(R.id.cardViewDashboardUser2);
+        cardView_ShowAppointment =v.findViewById(R.id.cardViewDashboardUser2);
         cardViewUsereMedicalReport=v.findViewById(R.id.cardViewDashboardUser3);
         cardView4=v.findViewById(R.id.cardViewDashboardUser4);
 
         cardView_appointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ChooseDoctorActivity.class);
-                startActivity(intent);
-
+                fragment = new PatientsAppointmentsFragment();
+                loadFragment(fragment);
 
             }
         });
 
-        cardView_diagnoses.setOnClickListener(new View.OnClickListener() {
+        cardView_ShowAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ShowAppointmentsActivity.class);

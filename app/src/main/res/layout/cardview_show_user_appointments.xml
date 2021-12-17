@@ -121,21 +121,17 @@
             android:textSize="@dimen/_16ssp"
             android:gravity="center"
             android:layout_marginBottom="@dimen/_7sdp"
-            app:layout_constraintBottom_toTopOf="@+id/cardViewAppointment_button"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewAppointment_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView_appointment_description"
             app:layout_constraintTop_toBottomOf="@+id/appointment_Time" />
 
-        <Button
-            android:id="@+id/cardViewAppointment_button"
+        <View
+            android:id="@+id/cardViewAppointment_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_25sdp"
             android:layout_margin="@dimen/_7sdp"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="@string/ShowAppointmentUser_btn_doctorViewInfo"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14ssp"
-            app:cornerRadius="@dimen/_7sdp"
+            android:background="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

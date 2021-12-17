@@ -56,17 +56,12 @@ public class ShowUserAppointmentsAdapter extends  RecyclerView.Adapter <ShowUser
         TextView textView_appointment_dat;
         TextView textView_appointment_Time;
         TextView textView_appointment_description;
-        Button button_show_info;
-
         public ShowUserAppointmentsHolder(@NonNull View itemView) {
             super(itemView);
             textView_appointment_reason = itemView.findViewById(R.id.appointment_reason);
             textView_appointment_dat = itemView.findViewById(R.id.appointment_dat);
             textView_appointment_Time = itemView.findViewById(R.id.appointment_Time);
             textView_appointment_description = itemView.findViewById(R.id.appointment_description);
-
-            button_show_info = itemView.findViewById(R.id.cardViewAppointment_button);
-
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -75,14 +70,6 @@ public class ShowUserAppointmentsAdapter extends  RecyclerView.Adapter <ShowUser
                     listener.onItemClick(id);
                 }
             });
-            button_show_info.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String id = (String) textView_appointment_reason.getTag();
-                    listener.onItemClick(id);
-                }
-            });
-
         }
     }
 }

@@ -122,11 +122,11 @@
 
 
     <!--    Patient Appointment Fragment-->
-    <string name="DoctorAppointmentFragment_TextView_Welcome">You Welcome</string>
-    <string name="DoctorAppointmentFragment_TextView_Appointment">Appointments</string>
-    <string name="DoctorAppointmentFragment_TextView_Appointment1">Your Appointments</string>
-    <string name="DoctorAppointmentFragment_TextView_NEWAppointment1">New Appointment</string>
-    <string name="DoctorAppointmentFragment_TextView_ShowAppointment1">Show Available Appointments</string>
+    <string name="AppointmentFragment_TextView_Welcome">You Welcome</string>
+    <string name="AppointmentFragment_TextView_Appointment">Appointments</string>
+    <string name="AppointmentFragment_TextView_Appointment1">Your Appointments</string>
+    <string name="AppointmentFragment_TextView_NEWAppointment1">New Appointment</string>
+    <string name="AppointmentFragment_TextView_ShowAppointment1">Show Available Appointments</string>
 
 
     <!--  MideclalReportFragment-->
@@ -141,6 +141,8 @@
     <string name="UserProfile_Btn_edit_profile">Edit your Profile</string>
     <string name="UserProfile_Btn_ViewAppointments">View Appointments </string>
     <string name="UserProfile_Btn_ViewMedicalReport">View Medical Report  </string>
+    <string name="DoctorProfile_btn_add_new_doctor">Add new doctor</string>
+
 
     <!--Languge-->
     <string name="LangugeActivity_txtview">Can you change the language  </string>
@@ -150,7 +152,6 @@
     <!--Home_menu-->
     <string name="Home_menu_Home">Home</string>
     <string name="Home_menu_Appointments">Appointments</string>
-    <string name="Home_menu_Diagnoses">Diagnoses</string>
     <string name="Home_menu_MedicalReport">MedicalReport</string>
     <string name="Home_menu_language">language</string>
     <string name="Home_menu_management">  User management"</string>
@@ -159,6 +160,16 @@
     <!--search_menu-->
     <string name="search_menu">search</string>
 
+    <!--Notification-->
+    <string name="TitleNotification">patients and Doctors Services App</string>
+    <string name="TextNotificationAppointment">An appointment has been booked for you at the doctor, click to view it  </string>
+    <string name="pendingIntentNotificationAppointment">Open appointment list </string>
+    <string name="TextNotificationAvailableAppointments">An available appointment has been created for patients to book with you. Click to view</string>
+    <string name="pendingIntentNotificationAvailableAppointments">Open the list of your available appointments </string>
+    <string name="TextNotificationReport">A medical report has been created successfully, click to view it </string>
+    <string name="pendingIntentNotificationReport">Open the list of your medical reports </string>
+    //permission
+    <string name="Not_permission">You do not have permission to enter </string>
 
 
 </resources>

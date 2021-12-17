@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 
+import com.eng_hussein_khalaf066336.pds.model.Doctors;
 import com.eng_hussein_khalaf066336.pds.ui.Adapter.ChoosePatientAdapter;
 import com.eng_hussein_khalaf066336.pds.ui.interfaces.OnRecyclerItemClickListener;
 import com.eng_hussein_khalaf066336.pds.R;
@@ -26,11 +27,11 @@ public class ChoosePatientActivity extends AppCompatActivity implements OnRecycl
     private RecyclerView recyclerView;
     private Toolbar toolbar;
     private ChoosePatientAdapter adapter;
-    private ArrayList<Users> patients;
+    private ArrayList<Users> patientsList;
     private PatientsViewModel patientsViewModel;
 
     public static String NAME_ID_choose_patient_CODE= "name_id_choose_patient_code";
-    String name,DateOfBirth;
+//    String name,DateOfBirth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +47,11 @@ public class ChoosePatientActivity extends AppCompatActivity implements OnRecycl
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager lm = new LinearLayoutManager(getBaseContext());
         recyclerView.setLayoutManager(lm);
-        patients = new ArrayList<>();
-        adapter= new ChoosePatientAdapter(patients,this);
+        if (patientsList ==null)
+        {
+            patientsList = new ArrayList<>();
+        }
+        adapter= new ChoosePatientAdapter(patientsList,this);
         recyclerView.setAdapter(adapter);
         toolbar = findViewById(R.id.ChoosePatientActivity_toolbar);
         setSupportActionBar(toolbar);
@@ -55,6 +59,7 @@ public class ChoosePatientActivity extends AppCompatActivity implements OnRecycl
 
     }
     public void getPatients(String patientId) {
+        patientsList.clear();
         patientsViewModel.getPatient(patientId);
         patientsViewModel.getPatientMutableLiveData().observe(this, new Observer<DataSnapshot>() {
             @Override
@@ -62,9 +67,9 @@ public class ChoosePatientActivity extends AppCompatActivity implements OnRecycl
                 for (DataSnapshot snapshotPatient :dataSnapshot.getChildren())
                 {
                     Users user=  snapshotPatient.getValue(Users.class);
-                    patients.add(user);
-                    name= user.getUserFullName();
-                    DateOfBirth= user.getUserDateOfBirth();
+                    patientsList.add(user);
+//                    name= user.getUserFullName();
+//                    DateOfBirth= user.getUserDateOfBirth();
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -81,29 +86,37 @@ public class ChoosePatientActivity extends AppCompatActivity implements OnRecycl
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-
+                filter(s);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String s) {
-
+                filter(s);
                 return false;
             }
         });
         searchView.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
-
+                getPatients("");//all patients;
                 return false;
             }
         });
-
-
         return  true;
-
-
     }
+    private void filter(String text) {
+        ArrayList<Users> patientsListFilter = new ArrayList<>();
+        for (Users patient : patientsList) {
+            if (patient.getUserFullName().toLowerCase().contains(text.toLowerCase()) ||
+                    patient.getUserEmail().toLowerCase().contains(text.toLowerCase())||
+                    patient.getUserAddress().toLowerCase().contains(text.toLowerCase())) {
+                patientsListFilter.add(patient);
+            }
+            adapter.filterList(patientsListFilter);
+        }
+    }
+
 
     @Override
     public void onItemClick(String id) {

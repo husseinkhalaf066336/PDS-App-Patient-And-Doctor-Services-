@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.eng_hussein_khalaf066336.pds.ui.Adapter.ShowUserReportsAdapter;
 import com.eng_hussein_khalaf066336.pds.ui.interfaces.OnRecyclerItemClickChooseListener;
@@ -34,63 +35,60 @@ public class ShowMedicalReportActivity extends AppCompatActivity implements OnRe
         setContentView(R.layout.activity_show_medical_report);
         doInitialization();
     }
-    private void doInitialization()
-    {
-        medicalReportViewModel =new ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory
+
+    private void doInitialization() {
+        medicalReportViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
                 .getInstance(this.getApplication())).get(MedicalReportViewModel.class);
         recyclerView = findViewById(R.id.ShowMedicalReportActivity_recyclerView);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager lm = new LinearLayoutManager(getBaseContext());
         recyclerView.setLayoutManager(lm);
-        reportArrayList = new ArrayList<>();
-        showUserReportsAdapter = new ShowUserReportsAdapter(reportArrayList,this);
-        recyclerView.setAdapter(showUserReportsAdapter);
-        ID_Current_user= CurrentUser.getCurrentUserId();
-        if (userType=="user")
+        if (reportArrayList==null)
         {
-            getMedicalReportForPatient(ID_Current_user);
+            reportArrayList = new ArrayList<>();
         }
-        else {
+        showUserReportsAdapter = new ShowUserReportsAdapter(reportArrayList, this);
+        recyclerView.setAdapter(showUserReportsAdapter);
+        ID_Current_user = CurrentUser.getCurrentUserId();
+        if (userType == "user") {
+            getMedicalReportForPatient(ID_Current_user);
+        } else {
             getMedicalReportForDoctor(ID_Current_user);
         }
     }
-    private void getMedicalReportForPatient(String UserId)
-    {
-        if (reportArrayList!=null)
-        {
-            reportArrayList.clear();
-        }
+
+    private void getMedicalReportForPatient(String UserId) {
+        reportArrayList.clear();
         medicalReportViewModel.getMedicalReportForPatient(UserId);
         medicalReportViewModel.getMutableLiveDataPatientReport().observe(this, new Observer<DataSnapshot>() {
             @Override
             public void onChanged(DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     // TODO: handle the post
-                    MedicalReport medicalReport=  postSnapshot.getValue(MedicalReport.class);
+                    MedicalReport medicalReport = postSnapshot.getValue(MedicalReport.class);
                     reportArrayList.add(medicalReport);
                 }
                 showUserReportsAdapter.notifyDataSetChanged();
             }
         });
     }
+
     private void getMedicalReportForDoctor(String DoctorId) {
-        if (reportArrayList!=null)
-        {
-            reportArrayList.clear();
-        }
+        reportArrayList.clear();
         medicalReportViewModel.getMedicalReportForDoctor(DoctorId);
         medicalReportViewModel.getMutableLiveDataDoctorReport().observe(this, new Observer<DataSnapshot>() {
             @Override
             public void onChanged(DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     // TODO: handle the post
-                    MedicalReport medicalReport=  postSnapshot.getValue(MedicalReport.class);
+                    MedicalReport medicalReport = postSnapshot.getValue(MedicalReport.class);
                     reportArrayList.add(medicalReport);
                 }
                 showUserReportsAdapter.notifyDataSetChanged();
             }
         });
     }
+
     @Override
     public void onItemClick(String id, String date, String Time) {
         // Toast.makeText(ShowMedicalReportActivity.this, " "+id+" "+
