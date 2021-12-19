@@ -22,6 +22,7 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - User can add personal info
 - User can search quickly
 - Provide security and confidentiality for files
+- Multilingual: Arabic and English
 - Speed in response
 - Attractive graphics
 
@@ -35,3 +36,14 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - [Lottie](https://lottiefiles.com/) -Animation
 - [Firebase realtime database](https://firebase.google.com/docs/database) -[Firebase Authentication](https://firebase.google.com/docs/auth)
 -  -[Firebase Cloud Storage](https://firebase.google.com/products/storage)
+
+## Screenshot
+- Splas Screen:
+- Login:
+- Register:
+- Dashboard Patient:
+- Dashboard Doctor:
+- Appointments:
+- Reports:
+- profil:
+
