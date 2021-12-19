@@ -32,4 +32,6 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 ## useing t Libraries and Frameworks:
 - [Material Design](https://material.io/design) - Design System
 - [Splash Screen](https://developer.android.com/reference/android/window/SplashScreen)
-- [Lottie]() -Animation
+- [Lottie](https://lottiefiles.com/) -Animation
+- [Firebase realtime database](https://firebase.google.com/docs/database) -[Firebase Authentication](https://firebase.google.com/docs/auth)
+-  -[Firebase Cloud Storage](https://firebase.google.com/products/storage)
