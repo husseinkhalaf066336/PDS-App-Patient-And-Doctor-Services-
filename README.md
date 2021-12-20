@@ -28,7 +28,7 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - Attractive graphics
 
 ## Android Architecture Components:
--[MVVM]() (Model View ViewModel) -Architecture Pattern
+-[MVVM](https://developer.android.com/topic/libraries/architecture/viewmodel) (Model View ViewModel) -Architecture Pattern
 -[ViewMode](https://developer.android.com/topic/libraries/architecture/viewmodel)
 -[LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
 ## useing t Libraries and Frameworks:
