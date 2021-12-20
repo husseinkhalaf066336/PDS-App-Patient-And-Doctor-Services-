@@ -24,6 +24,7 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - Provide security and confidentiality for files
 - Multilingual: Arabic and English
 - Speed in response
+- Send Notificationtoes to Users
 - Attractive graphics
 
 ## Android Architecture Components:
@@ -36,6 +37,8 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - [Lottie](https://lottiefiles.com/) -Animation
 - [Firebase realtime database](https://firebase.google.com/docs/database) -[Firebase Authentication](https://firebase.google.com/docs/auth)
 -  -[Firebase Cloud Storage](https://firebase.google.com/products/storage)
+-  [navigation-drawer](https://material.io/components/navigation-drawer)
+-  [intuit](https://github.com/intuit/sdp)
 
 ## Screenshot
 - Splas Screen:
