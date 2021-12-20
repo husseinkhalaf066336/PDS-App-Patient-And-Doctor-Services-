@@ -37,8 +37,11 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - [Lottie](https://lottiefiles.com/) -Animation
 - [Firebase realtime database](https://firebase.google.com/docs/database) -[Firebase Authentication](https://firebase.google.com/docs/auth)
 - [Firebase Cloud Storage](https://firebase.google.com/products/storage)
--  [navigation-drawer](https://material.io/components/navigation-drawer)
--  [intuit](https://github.com/intuit/sdp)
+- [navigation-drawer](https://material.io/components/navigation-drawer)
+- [intuit](https://github.com/intuit/sdp)
+- [DeffUtil with  RecyclerView](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView)
+- [SearchView](https://developer.android.com/reference/android/widget/SearchView)
+
 
 ## Screenshot
 - Splas Screen:
