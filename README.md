@@ -43,6 +43,7 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - [push notification](https://developer.android.com/guide/topics/ui/notifiers/notifications)
 - [RecyclerView](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView)
 - [SearchView](https://developer.android.com/reference/android/widget/SearchView)
+- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element)
 
 
 ## Screenshot
