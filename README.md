@@ -24,7 +24,7 @@ He inherits the doctor and certainly has all his permissions,and he can also add
 - Provide security and confidentiality for files
 - Multilingual: Arabic and English
 - Speed in response
-- Send Notificationtoes to Users
+- Send Notifications to Users
 - Attractive graphics
 
 ## Android Architecture Components:
