@@ -33,8 +33,8 @@
 
         <ImageView
             android:id="@+id/bookAppointment_icon_clock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
             android:src="@drawable/ic_clock1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -54,15 +54,16 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="250dp"
-            android:layout_height="66dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:text="@string/AvailableAppointmentsActivity_TextView_topView"
             android:textColor="@color/white"
-            android:textSize="@dimen/_18ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/bookAppointment_icon_clock"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
             app:layout_constraintEnd_toStartOf="@+id/bookAppointment_icon_clock"
-            app:layout_constraintTop_toTopOf="@+id/bookAppointment_icon_clock" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appBarLayout" />
 
         <LinearLayout
             android:id="@+id/container11"
@@ -89,22 +90,22 @@
                 android:gravity="center"
                 android:text="@string/AvailableAppointmentsActivity_TextView_container"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="@dimen/_24ssp" />
-                <Button
-                    android:id="@+id/AvailableAppointmentsActivity_Button_AddDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:drawableEnd="@drawable/ic_add_circle"
-                    android:drawablePadding="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@string/AvailableAppointmentsActivity_Button_AddDate"
-                    android:textSize="@dimen/_20ssp"
-                    app:cornerRadius="@dimen/_10sdp"
-                    />
+                android:textSize="@dimen/_18ssp" />
+
+            <Button
+                android:id="@+id/AvailableAppointmentsActivity_Button_AddDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_add_circle"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="@string/AvailableAppointmentsActivity_Button_AddDate"
+                android:textSize="@dimen/_16ssp"
+                app:cornerRadius="@dimen/_10sdp" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -123,20 +124,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:id="@+id/AvailableAppointmentsActivity_Button_AddTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:drawableEnd="@drawable/ic_add_circle"
-                    android:drawablePadding="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@string/AvailableAppointmentsActivity_Button_AddTime"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"                    android:textSize="@dimen/_20ssp"
-                    app:cornerRadius="@dimen/_10sdp"
-                    />
+
+            <Button
+                android:id="@+id/AvailableAppointmentsActivity_Button_AddTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_add_circle"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="@string/AvailableAppointmentsActivity_Button_AddTime"
+                android:textSize="@dimen/_16ssp"
+                app:cornerRadius="@dimen/_10sdp" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -151,6 +153,7 @@
                         android:enabled="false"
                         android:padding="@dimen/_20sdp" />
                 </com.google.android.material.textfield.TextInputLayout>
+
             <Button
                 android:id="@+id/AvailableAppointmentsActivity_Button_save"
                 android:layout_width="@dimen/_160sdp"
@@ -158,7 +161,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="@string/activityRegister_Button_save"
-                android:textSize="@dimen/_20ssp"
+                android:textSize="@dimen/_16ssp"
                 app:cornerRadius="@dimen/_10sdp" />
         </LinearLayout>
 

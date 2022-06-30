@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/activityRegister_icon_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
             android:src="@drawable/ic_assignment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,12 +43,12 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="230dp"
+            android:layout_width="wrap_content"
             android:layout_height="106dp"
             android:gravity="center"
             android:text="@string/UserProfile_TextView_welcome"
             android:textColor="@color/white"
-            android:textSize="@dimen/_22ssp"
+            android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="@+id/activityRegister_icon_user"
             app:layout_constraintEnd_toStartOf="@+id/activityRegister_icon_user"
             app:layout_constraintTop_toTopOf="@+id/activityRegister_icon_user" />
@@ -108,10 +108,10 @@
                 android:id="@+id/DoctorProfile_btn_EditProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_20ssp"
-                app:cornerRadius="@dimen/_7sdp"
                 android:backgroundTint="@color/green"
                 android:text="@string/UserProfile_Btn_edit_profile"
+                android:textSize="@dimen/_18ssp"
+                app:cornerRadius="@dimen/_7sdp"
                 app:layout_constraintEnd_toEndOf="@+id/UserProfile_txt_Email"
                 app:layout_constraintStart_toStartOf="@+id/UserProfile_txt_Email"
                 app:layout_constraintTop_toBottomOf="@+id/UserProfile_txt_Email" />

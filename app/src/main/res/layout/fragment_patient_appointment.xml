@@ -36,11 +36,11 @@
 
                 <TextView
                     android:id="@+id/t1"
-                    android:layout_width="194dp"
-                    android:layout_height="42dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/PatientAppointmentFragment_TextView_Welcome"
                     android:textColor="#fff"
-                    android:textSize="@dimen/_24ssp"
+                    android:textSize="@dimen/_18ssp"
                     app:layout_constraintEnd_toStartOf="@+id/imageView6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -56,16 +56,15 @@
                     android:letterSpacing="0.04"
                     android:text="@string/PatientAppointmentFragment_TextView_Appointment"
                     android:textColor="#fff"
-                    android:textSize="28dp"
-                    app:layout_constraintEnd_toEndOf="@+id/t1"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/t1"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/t1" />
 
                 <ImageView
                     android:id="@+id/imageView6"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
                     android:src="@drawable/profile"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -77,8 +76,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/container111"
-                android:layout_width="385dp"
-                android:layout_height="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,39 +89,24 @@
                     android:layout_width="@dimen/_120sdp"
                     android:layout_height="@dimen/_122sdp"
                     android:src="@drawable/patient"
-                    android:layout_marginRight="@dimen/_5sdp"
-                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView14"
-                    android:layout_width="234dp"
-                    android:layout_height="138dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:paddingLeft="40dp"
                     android:paddingTop="50dp"
-                    android:text="@string/PatientAppointmentFragment_TextView_Appointment1"
+                    android:text="@string/app_name"
                     android:textColor="#fff"
-                    android:textSize="@dimen/_24ssp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView13"
-                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    android:textSize="@dimen/_28ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
-                    android:paddingLeft="40dp"
-                    android:paddingTop="10dp"
-                    android:text="2021/07/09"
-                    android:textColor="#fff"
-                    android:textSize="35dp"
-                    android:textStyle="bold"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -254,11 +238,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:letterSpacing="0.02"
                     android:gravity="center"
+                    android:letterSpacing="0.02"
                     android:text="@string/PatientAppointmentFragment_TextView_Appointment"
                     android:textColor="#516b9e"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/_24ssp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -301,7 +285,7 @@
                         android:letterSpacing="0.03"
                         android:text="@string/PatientAppointmentFragment_TextView_NEWAppointment1"
                         android:textColor="@color/white"
-                        android:textSize="25dp"
+                        android:textSize="@dimen/_18ssp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/view33"
@@ -361,7 +345,7 @@
                         android:letterSpacing="0.03"
                         android:text="@string/PatientAppointmentFragment_TextView_ShowAppointment1"
                         android:textColor="@color/white"
-                        android:textSize="25dp"
+                        android:textSize="@dimen/_18ssp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/view3"

@@ -2,7 +2,7 @@
     <string name="app_name">PDS</string>
 
     <!--    activityLogin-->
-    <string name="activityLogin_txt_tolbar">Hallo my app PDS</string>
+    <string name="activityLogin_txt_tolbar">Patients  Doctor Services</string>
     <string name="activityLogin_EitText_email">Email</string>
     <string name="activityLogin_EitText_password">pleas enter your password</string>
     <string name="activityLogin_Button_login">Login</string>
@@ -26,17 +26,10 @@
     <string name="dashboard_user_image_top_TextView">PDS App</string>
 
     <string name="dashboard_user_cardView_TextView_appointment1">appointment</string>
-    <string name="dashboard_user_cardView_TextView_appointment2">your appointment</string>
-
     <string name="dashboard_user_cardView_TextView_show_appointment">Show_appointment</string>
-    <string name="dashboard_user_cardView_TextView_show_appointment2">Available</string>
-
+    <string name="dashboard_user_cardView_TextView_show_appointment2">Available appointment</string>
     <string name="dashboard_user_cardView_TextView_MedicalReport1"> Medical Report </string>
-    <string name="dashboard_user_cardView_TextView_MedicalReport2">View Medical Report </string>
-    <string name="dashboard_Doctor_cardView_TextView_MedicalReport2"> Add Medical Report</string>
-
     <string name="dashboard_user_cardView_TextView_Profile1"> My profile  </string>
-    <string name="dashboard_user_cardView_TextView_Profile2"> View My profile   </string>
 
 
     <!--    chooseDoctor-->
@@ -63,7 +56,7 @@
     <string name="activityNewDoctor_EitText_About_the_doctor">About the doctor</string>
 
     <!--    BookAppointment-->
-    <string name="BookAppointment_TextView_top">Reason For The Appointment</string>
+    <string name="BookAppointment_TextView_top">Choose the appointment Information </string>
     <string name="BookAppointment_EitText_reasonAppointment">Reason For The Appointment</string>
     <string name="BookAppointment_EitText_DateAppointment">Appointment Date</string>
     <string name="BookAppointment_EitText_TimeAppointment">Appointment Time</string>
@@ -76,7 +69,7 @@
     <string name="ShowAppointmentUse_textView_appointment_date">Appointment Date:</string>
     <string name="textView_appointment_Time">Appointment Time:</string>
     <string name="ShowAppointmentUser_textView_appointment_description">Appointment description:</string>
-    <string name="ShowAppointmentUser_textView_ToolbarAppointment">يمكنك الإطلاع على المواعيد التي قمت بحجزها</string>
+    <string name="ShowAppointmentUser_textView_ToolbarAppointment">see your Appointment</string>
     <string name="ShowAppointmentUser_btn_doctorViewInfo">view More information</string>
     <string name="ShowAppointmentUser_btn_doctorViewInfo2">view lise information of the Appointment</string>
 
@@ -85,13 +78,13 @@
     <string name="dashboardDoctor_TextView_appointment2"> manage appointments
 </string>
     <!--    AvailableAppointmentsActivity-->
-    <string name="AvailableAppointmentsActivity_TextView_topView">Welcome to the activity of selecting the available appointments</string>
+    <string name="AvailableAppointmentsActivity_TextView_topView">available appointments</string>
     <string name="AvailableAppointmentsActivity_TextView_container">Available appointments </string>
     <string name="AvailableAppointmentsActivity_Button_AddDate">Add date of appointment</string>
     <string name="AvailableAppointmentsActivity_Button_AddTime">Add time of appointment</string>
 
     <!--  ChooosAvailableAppointmentsActivity-->
-    <string name="ChooseAvailableAppointmentsActivity_TextView_topView">You can choose an appointment from the list of available doctor appointments</string>
+    <string name="ChooseAvailableAppointmentsActivity_TextView_topView"> choose an appointment</string>
     <string name="ChooseAvailableAppointmentsActivity_TextView_date">Date:</string>
     <string name="ChooseAvailableAppointmentsActivity_TextView_time">Time:</string>
     <!--  ShowDoctorAvailableAppointmentsActivity-->
@@ -114,9 +107,8 @@
     <string name="ShowMedicalReport_TextView_SuggestedMedication">Medications:</string>
 
     <!--    Patient Appointment Fragment-->
-    <string name="PatientAppointmentFragment_TextView_Welcome">Welcome Back</string>
-    <string name="PatientAppointmentFragment_TextView_Appointment">Appointments</string>
-    <string name="PatientAppointmentFragment_TextView_Appointment1">Add Your Appointments</string>
+    <string name="PatientAppointmentFragment_TextView_Welcome">Welcome </string>
+    <string name="PatientAppointmentFragment_TextView_Appointment">your Appointments</string>
     <string name="PatientAppointmentFragment_TextView_NEWAppointment1">New Appointment</string>
     <string name="PatientAppointmentFragment_TextView_ShowAppointment1">Show Appointments</string>
 
@@ -126,14 +118,14 @@
     <string name="AppointmentFragment_TextView_Appointment">Appointments</string>
     <string name="AppointmentFragment_TextView_Appointment1">Your Appointments</string>
     <string name="AppointmentFragment_TextView_NEWAppointment1">New Appointment</string>
-    <string name="AppointmentFragment_TextView_ShowAppointment1">Show Available Appointments</string>
+    <string name="AppointmentFragment_TextView_ShowAppointment1">Available Appointments</string>
 
 
     <!--  MideclalReportFragment-->
-    <string name="MedicalReportReportFragment_TextView_welcome">you welcome in window</string>
+    <string name="MedicalReportReportFragment_TextView_welcome">welcome</string>
     <string name="MedicalReportFragment_TextView1">Mideclal Report </string>
-    <string name="UserMedicalReportFragment_TextVie2"> can you view your MedicalReport </string>
-    <string name="DoctorMedicalReportFragment_TextVie2"> Add MedicalReport of the patients </string>
+    <string name="UserMedicalReportFragment_TextVie2"> view your MedicalReport </string>
+    <string name="DoctorMedicalReportFragment_TextVie2"> Add MedicalReport </string>
 
 
     <!--  UserProfile-->

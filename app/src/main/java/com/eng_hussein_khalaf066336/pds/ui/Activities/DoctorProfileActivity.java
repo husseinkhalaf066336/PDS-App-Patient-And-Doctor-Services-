@@ -101,9 +101,7 @@ public class DoctorProfileActivity extends AppCompatActivity implements OnRecycl
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         rv_ShowAppointment.setLayoutManager(lm);
         if (AppointmentsList == null) {
-            AppointmentsList = new ArrayList<>();
-
-        }
+            AppointmentsList = new ArrayList<>();}
         ShowUserAppointmentsAdapter = new ShowUserAppointmentsAdapter(AppointmentsList, this);
         rv_ShowAppointment.setAdapter(ShowUserAppointmentsAdapter);
         getDoctorAppointment(ID_Current_doctor);

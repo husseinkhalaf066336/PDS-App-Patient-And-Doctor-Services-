@@ -35,8 +35,8 @@
 
         <ImageView
             android:id="@+id/bookAppointment_icon_clock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
             android:src="@drawable/ic_print"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -56,14 +56,16 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="244dp"
-            android:layout_height="87dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:text="@string/DoctorMedicalReportFragment_TextVie2"
             android:textColor="@color/white"
-            android:textSize="@dimen/_26ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/bookAppointment_icon_clock"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
             app:layout_constraintEnd_toStartOf="@+id/bookAppointment_icon_clock"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/bookAppointment_icon_clock" />
 
         <LinearLayout
@@ -107,7 +109,8 @@
                     android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/MedicalReport_EditText_ReportTitle"
                     android:padding="@dimen/_35sdp"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/_18ssp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -125,7 +128,8 @@
                     android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/MedicalReport_EditText_ReportDetails"
                     android:padding="@dimen/_35sdp"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/_18ssp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -144,7 +148,8 @@
                     android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/MedicalReport_EditText_DoctorsInstructions"
                     android:padding="@dimen/_35sdp"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/_18ssp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -165,7 +170,8 @@
                     android:hint="@string/MedicalReport_EditText_SuggestedMedication"
                     android:inputType="text"
                     android:padding="@dimen/_35sdp"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/_18ssp" />
             </com.google.android.material.textfield.TextInputLayout>
             <Button
                 android:id="@+id/MedicalReportActivity_Button_save"

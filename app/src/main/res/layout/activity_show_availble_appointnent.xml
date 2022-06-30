@@ -44,13 +44,14 @@
 
         <TextView
             android:id="@+id/ChooseAvailableAppointmentsActivity_TextView_topView"
-            android:layout_width="272dp"
-            android:layout_height="77dp"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:text="@string/ShowDoctorAvailableAppointmentsActivity_TextView"
             android:textColor="@color/white"
-            android:textSize="@dimen/_26ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/bookAppointment_icon_clock"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bookAppointment_icon_clock"
             app:layout_constraintTop_toTopOf="@+id/bookAppointment_icon_clock" />

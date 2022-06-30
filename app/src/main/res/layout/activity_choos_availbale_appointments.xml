@@ -21,6 +21,7 @@
             android:background="@color/colorPrimaryDark"
             android:fitsSystemWindows="true"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,25 +36,25 @@
 
 
         <ImageView
-            android:id="@+id/bookAppointment_icon_clock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/bookAppointment_icon_user"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
             android:src="@drawable/ic_clock1"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/ChooseAvailableAppointmentsActivity_TextView_topView"
-            android:layout_width="272dp"
-            android:layout_height="77dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:text="@string/ChooseAvailableAppointmentsActivity_TextView_topView"
             android:textColor="@color/white"
-            android:textSize="@dimen/_18ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/bookAppointment_icon_clock"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/bookAppointment_icon_clock"
-            app:layout_constraintTop_toTopOf="@+id/bookAppointment_icon_clock" />
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintEnd_toStartOf="@+id/bookAppointment_icon_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <androidx.core.widget.NestedScrollView

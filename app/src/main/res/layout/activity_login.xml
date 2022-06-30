@@ -32,29 +32,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-    <ImageView
-        android:id="@+id/activityLogin_icon_user"
-        android:layout_width="56dp"
-        android:layout_height="63dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.39"
-        app:srcCompat="@drawable/ic_person" />
+        <ImageView
+            android:id="@+id/activityLogin_icon_user"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.39"
+            app:srcCompat="@drawable/ic_person" />
 
-    <TextView
-        android:id="@+id/activityLogin_txt_tolbar"
-        android:layout_width="175dp"
-        android:layout_height="56dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/activityLogin_txt_tolbar"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_16ssp"
-        app:layout_constraintBottom_toBottomOf="@+id/activityLogin_icon_user"
-        app:layout_constraintStart_toEndOf="@+id/activityLogin_icon_user"
-        app:layout_constraintTop_toTopOf="@+id/activityLogin_icon_user" />
+        <TextView
+            android:id="@+id/activityLogin_txt_tolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/activityLogin_txt_tolbar"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/activityLogin_icon_user"
+            app:layout_constraintStart_toEndOf="@+id/activityLogin_icon_user"
+            app:layout_constraintTop_toTopOf="@+id/activityLogin_icon_user" />
 
         <ImageView
             android:id="@+id/UserProfile_imageView_user"
@@ -68,43 +68,42 @@
             app:srcCompat="@drawable/imglogin" />
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="242dp"
-        android:layout_height="203dp"
-        app:layout_constraintEnd_toStartOf="@+id/activityLogin_doctor1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityLogin_icon_user"
-        app:srcCompat="@drawable/ic_undrawdoctors" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_200sdp"
+            app:layout_constraintEnd_toStartOf="@+id/activityLogin_doctor1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityLogin_icon_user"
+            app:srcCompat="@drawable/ic_undrawdoctors" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
-        android:text="PDS"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_40ssp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/activityLogin_doctor1"
-        app:layout_constraintEnd_toEndOf="@+id/activityLogin_doctor1"
-        app:layout_constraintStart_toStartOf="@+id/activityLogin_doctor1"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:text="PDS"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_32sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/activityLogin_doctor1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/activityLogin_doctor1"
-        android:layout_width="150dp"
-        android:layout_height="@dimen/_230sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
+        <ImageView
+            android:id="@+id/activityLogin_doctor1"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_230sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
 
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.167"
-        app:srcCompat="@drawable/doctor4" />
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="0.167"
+            app:srcCompat="@drawable/doctor4" />
 
 
         <LinearLayout

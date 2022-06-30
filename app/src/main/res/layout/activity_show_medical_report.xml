@@ -36,7 +36,7 @@
 
         <ImageView
             android:id="@+id/bookAppointment_icon_clock"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_75ssp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_print"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,16 +44,17 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="242dp"
-            android:layout_height="118dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:inputType="textMultiLine"
-            android:gravity="center
-"
             android:text="@string/UserMedicalReportFragment_TextVie2"
             android:textColor="@color/white"
-            android:textSize="@dimen/_24ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/bookAppointment_icon_clock"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
             app:layout_constraintEnd_toStartOf="@+id/bookAppointment_icon_clock"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/bookAppointment_icon_clock" />
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"

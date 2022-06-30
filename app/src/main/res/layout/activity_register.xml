@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/activityRegister_icon_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75ssp"
             android:src="@drawable/ic_assignment"
             app:layout_constraintBottom_toTopOf="@+id/progressBar"
             app:layout_constraintEnd_toStartOf="@+id/UserProfile_imageView_user"
@@ -79,14 +79,15 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/activityRegister_TextView_container"
-                android:gravity="center"
-                android:textColor="@color/colorPrimaryDark"
                 android:background="@drawable/shap_activity_login_cardview"
-                android:textSize="@dimen/_24ssp"/>
+                android:gravity="center"
+                android:text="@string/activityRegister_TextView_container"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_18ssp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -101,7 +102,8 @@
                             android:drawableStart="@drawable/ic_icon_user1"
                             android:drawablePadding="@dimen/_10sdp"
                             android:hint="@string/activityRegister_EitText_userName"
-                            android:padding="@dimen/_20sdp" />
+                            android:padding="@dimen/_20sdp"
+                            android:textSize="@dimen/_18ssp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -119,7 +121,8 @@
                             android:drawablePadding="@dimen/_10sdp"
                             android:hint="@string/activityRegister_EitText_email"
                             android:inputType="textEmailAddress"
-                            android:padding="@dimen/_20sdp" />
+                            android:padding="@dimen/_20sdp"
+                            android:textSize="@dimen/_18ssp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -159,7 +162,8 @@
                             android:drawablePadding="@dimen/_10sdp"
                             android:hint="@string/activityRegister_EitText_ConfirmPassword"
                             android:inputType="textPassword"
-                            android:padding="@dimen/_20sdp" />
+                            android:padding="@dimen/_20sdp"
+                            android:textSize="@dimen/_18ssp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -180,16 +184,17 @@
                         android:layout_marginStart="@dimen/_3sdp"
                         android:layout_marginEnd="@dimen/_3sdp">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/activityRegister_EitText_Age1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:drawableStart="@drawable/ic_icon_calendar"
-                            android:drawablePadding="@dimen/_10sdp"
-                            android:hint="@string/activityRegister_EitText_Age"
-                            android:enabled="false"
-                            android:padding="@dimen/_20sdp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activityRegister_EitText_Age1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_icon_calendar"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:hint="@string/activityRegister_EitText_Age"
+                    android:padding="@dimen/_20sdp"
+                    android:textSize="@dimen/_18ssp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -208,19 +213,20 @@
                             android:drawableStart="@drawable/ic_icon_location"
                             android:drawablePadding="@dimen/_10sdp"
                             android:hint="@string/activityRegister_EitText_Address"
-                            android:padding="@dimen/_20sdp" />
+                            android:padding="@dimen/_20sdp"
+                            android:textSize="@dimen/_18ssp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <Button
-                        android:id="@+id/activityLogin_Button_login"
-                        android:layout_width="@dimen/_160sdp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:onClick="register"
-                        android:text="@string/activityRegister_Button_save"
-                        android:textSize="@dimen/_20ssp"
-                        app:cornerRadius="@dimen/_10sdp" />
+            <Button
+                android:id="@+id/activityLogin_Button_login"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:onClick="register"
+                android:text="@string/activityRegister_Button_save"
+                android:textSize="@dimen/_18ssp"
+                app:cornerRadius="@dimen/_10sdp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

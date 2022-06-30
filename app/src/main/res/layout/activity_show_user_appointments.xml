@@ -35,24 +35,22 @@
 
         <ImageView
             android:id="@+id/show_user_appointment_icon_clock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
             android:src="@drawable/ic_history"
-            app:layout_constraintBottom_toBottomOf="@+id/show_user_appointmentActivity_TextView_topView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/show_user_appointmentActivity_TextView_topView"
-            app:layout_constraintTop_toTopOf="@+id/show_user_appointmentActivity_TextView_topView" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/show_user_appointmentActivity_TextView_topView"
-            android:layout_width="235dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:text="@string/ShowAppointmentUser_textView_ToolbarAppointment"
             android:textColor="@color/white"
             android:textSize="@dimen/_18ssp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintBottom_toBottomOf="@+id/show_user_appointment_icon_clock"
+            app:layout_constraintEnd_toStartOf="@+id/show_user_appointment_icon_clock"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,17 +61,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintTop_toBottomOf="@+id/show_user_appointment_icon_clock"
             app:srcCompat="@drawable/cartoon_doctor" />
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="199dp"
-            android:layout_height="263dp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_200sdp"
             app:layout_constraintEnd_toStartOf="@+id/imageView7"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintTop_toBottomOf="@+id/show_user_appointment_icon_clock"
             app:srcCompat="@drawable/cartoon_doctor1" />
 
         <LinearLayout

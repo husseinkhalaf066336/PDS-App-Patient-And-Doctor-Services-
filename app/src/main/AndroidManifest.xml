@@ -18,23 +18,54 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Activities.LanguagActivity" />
-        <activity android:name=".ui.Activities.DoctorProfileActivity" />
-        <activity android:name=".ui.Activities.ShowAvailableAppointmentsActivity" />
-        <activity android:name=".ui.Activities.UserProfileActivity" />
-        <activity android:name=".ui.Activities.ShowMedicalReportActivity" />
-        <activity android:name=".ui.Activities.MedicalReportActivity" />
-        <activity android:name=".ui.Activities.ChoosePatientActivity" />
-        <activity android:name=".ui.Activities.ShowAppointmentsActivity" />
-        <activity android:name=".ui.Activities.ChooseAvailableAppointmentsActivity" />
-        <activity android:name=".ui.Activities.AvailableAppointmentsActivity" />
-        <activity android:name=".ui.Activities.BookAppointmentActivity" />
-        <activity android:name=".ui.Activities.ChooseDoctorActivity" />
-        <activity android:name=".ui.Activities.NewDoctorActivity" />
-        <activity android:name=".ui.Activities.HomeActivity" />
-        <activity android:name=".ui.Activities.RegisterActivity" />
-        <activity android:name=".ui.Activities.LoginActivity" />
-
+        <activity
+            android:name=".ui.Activities.LanguagActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.DoctorProfileActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.ShowAvailableAppointmentsActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.UserProfileActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.ShowMedicalReportActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.MedicalReportActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.ChoosePatientActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.ShowAppointmentsActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.ChooseAvailableAppointmentsActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.AvailableAppointmentsActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.BookAppointmentActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.ChooseDoctorActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.NewDoctorActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.HomeActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.RegisterActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
+        <activity
+            android:name=".ui.Activities.LoginActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

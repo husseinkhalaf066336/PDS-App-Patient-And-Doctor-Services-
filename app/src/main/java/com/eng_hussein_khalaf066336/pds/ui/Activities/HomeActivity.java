@@ -31,7 +31,6 @@ import com.eng_hussein_khalaf066336.pds.ui.Fragments.UserMedicalReportFragment;
 import com.eng_hussein_khalaf066336.pds.R;
 import com.eng_hussein_khalaf066336.pds.model.Doctors;
 import com.eng_hussein_khalaf066336.pds.model.Users;
-import com.eng_hussein_khalaf066336.pds.ui.Fragments.languageFragment;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.AuthViwModel;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.DoctorsViewModel;
 import com.eng_hussein_khalaf066336.pds.ui.viewModel.PatientsViewModel;
@@ -40,8 +39,6 @@ import com.google.firebase.database.DataSnapshot;
 
 public class HomeActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener,
         DialogFragment.onPositiveClickListener,DialogFragment.onNegativeClickListener {
-    private TextView textView_UserName, textView_UserEmail;
-    private String UserName, UserEmail;
     public static String userId, UserType;
     private Toolbar toolbar;
     private ProgressBar progressBarLoad;
@@ -65,9 +62,7 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.navigation);
         progressBarLoad = findViewById(R.id.progressBarLoad);
-        H_view = navigationView.getHeaderView(0);
-        textView_UserName = H_view.findViewById(R.id.textViewHeaderName);
-        textView_UserEmail = H_view.findViewById(R.id.textViewHeaderEmail);
+
 
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, 0, 0);
@@ -103,8 +98,6 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
                 for (DataSnapshot snapshotPatient :dataSnapshot.getChildren())
                 {
                     Users user=  snapshotPatient.getValue(Users.class);
-                    UserName=user.getUserFullName();
-                    UserEmail=user.getUserEmail();
                     UserType=user.getUserType();
                     if (UserType.equals("user")) {
                         fragment = new DashboardUserFragment();
@@ -120,8 +113,6 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
                 for (DataSnapshot snapshotDoctor: dataSnapshot.getChildren()) {
                     // TODO: handle the post
                     Doctors doctor=  snapshotDoctor.getValue(Doctors.class);
-                    UserName=doctor.getDoctorFullName();
-                    UserEmail=doctor.getDoctorEmail();
                     UserType=doctor.getDoctorType();
                     if (UserType.equals("doctor")||UserType.equals("admin")){
                         fragment = new DashboardDoctorFragment();
@@ -211,11 +202,9 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
                 }
                 return true;
             case  R.id.App_language:
-                fragment = new languageFragment();
-                loadFragment(fragment);
-//                Intent intent_language = new Intent(getBaseContext(), LanguagActivity.class);
-//                startActivity(intent_language);
-//                finish();
+                Intent intent_language = new Intent(getBaseContext(), LanguagActivity.class);
+                startActivity(intent_language);
+                finish();
                 return true;
             case R.id.Logout:
                 DialogFragment dialogFragmentLogout = DialogFragment.newInstance("Logout","are you sure?"

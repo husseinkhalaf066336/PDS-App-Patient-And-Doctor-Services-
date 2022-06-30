@@ -31,7 +31,7 @@
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientName"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/PatientName"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,12 +39,12 @@
 
         <TextView
             android:id="@+id/PatientName"
-            android:layout_width="@dimen/_130sdp"
+            android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientName"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintEnd_toStartOf="@+id/PatientImage"
             app:layout_constraintStart_toEndOf="@+id/PatientNameText"
             app:layout_constraintTop_toTopOf="@+id/PatientImage" />
@@ -56,20 +56,20 @@
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientPron"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/PatientPron"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/PatientPron"  />
+            app:layout_constraintTop_toTopOf="@+id/PatientPron" />
 
         <TextView
             android:id="@+id/PatientPron"
-            android:layout_width="@dimen/_130sdp"
+            android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientPron"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toBottomOf="@+id/PatientImage"
             app:layout_constraintEnd_toStartOf="@+id/PatientImage"
             app:layout_constraintStart_toEndOf="@+id/PatientPronText"
@@ -92,7 +92,7 @@
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientEmail"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/text_choosePatient_email"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,11 +105,11 @@
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientEmail"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toTopOf="@+id/text_choosePatient_Address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView_choosePatient_email"
-            app:layout_constraintTop_toBottomOf="@+id/cardViewPatient_button"/>
+            app:layout_constraintTop_toBottomOf="@+id/cardViewPatient_button" />
 
         <TextView
             android:id="@+id/textView_choosePatient_Address"
@@ -118,11 +118,11 @@
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientAddress"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/text_choosePatient_Address"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/text_choosePatient_Address"/>
+            app:layout_constraintTop_toTopOf="@+id/text_choosePatient_Address" />
 
         <TextView
             android:id="@+id/text_choosePatient_Address"
@@ -131,7 +131,7 @@
             android:gravity="center"
             android:text="@string/choosePatient_TextView_PatientAddress"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/text_choosePatient_email"
             app:layout_constraintStart_toEndOf="@+id/textView_choosePatient_Address"

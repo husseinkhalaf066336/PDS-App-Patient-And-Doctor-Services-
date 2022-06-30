@@ -93,15 +93,17 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/activityNewDoctor_TextView_container"                    android:layout_marginStart="@dimen/_100sdp"
                     android:layout_margin="@dimen/_3sdp"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginStart="@dimen/_100sdp"
                     android:background="@drawable/shap_activity_login_cardview"
-                    android:textSize="@dimen/_24ssp"/>
+                    android:gravity="center"
+                    android:text="@string/activityNewDoctor_TextView_container"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_18ssp" />
 
                 <Switch
                     android:id="@+id/switch1"
@@ -125,7 +127,8 @@
                         android:drawableStart="@drawable/ic_icon_user1"
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityRegister_EitText_userName"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -143,7 +146,8 @@
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityRegister_EitText_email"
                         android:inputType="textEmailAddress"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -163,7 +167,8 @@
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityRegister_EitText_password"
                         android:inputType="textPassword"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -183,7 +188,8 @@
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityRegister_EitText_ConfirmPassword"
                         android:inputType="textPassword"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -212,9 +218,10 @@
                         android:background="@color/white"
                         android:drawableStart="@drawable/ic_icon_calendar"
                         android:drawablePadding="@dimen/_10sdp"
-                        android:hint="@string/activityRegister_EitText_Age"
                         android:enabled="false"
-                        android:padding="@dimen/_20sdp" />
+                        android:hint="@string/activityRegister_EitText_Age"
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -232,18 +239,20 @@
                         android:drawableStart="@drawable/ic_icon_location"
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityRegister_EitText_Address"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_3sdp"
                     android:layout_marginStart="@dimen/_100sdp"
+                    android:background="@drawable/shap_activity_login_cardview"
                     android:gravity="center"
                     android:text="@string/activityNewDoctor_TextView_container1"
-                    android:background="@drawable/shap_activity_login_cardview"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/_24ssp"/>
+                    android:textSize="@dimen/_18ssp" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -258,7 +267,8 @@
                         android:drawableStart="@drawable/ic_icon_address_book"
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityNewDoctor_EitText_Specialization"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -275,7 +285,8 @@
                         android:drawableStart="@drawable/ic_iconsave_disk"
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityRegister_EitText_Functional_section"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -292,7 +303,8 @@
                         android:drawableStart="@drawable/ic_iconbookmark"
                         android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/activityNewDoctor_EitText_About_the_doctor"
-                        android:padding="@dimen/_20sdp" />
+                        android:padding="@dimen/_20sdp"
+                        android:textSize="@dimen/_18ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
